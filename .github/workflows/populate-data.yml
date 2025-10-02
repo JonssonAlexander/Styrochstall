@@ -30,11 +30,15 @@ jobs:
         run: |
           python populate_data.py --iterations 1
 
-      - name: Commit & push snapshots
+      - name: Commit GBFS
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(data): add GBFS/MAPS snapshot"
-          branch: main
-          file_pattern: |
-            data/raw/GBFS/**
-            data/raw/MAPS/**
+          commit_message: "chore(data): add GBFS snapshot"
+          file_pattern: data/raw/GBFS/**
+
+      # Commit MAPS only
+      - name: Commit MAPS
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(data): add MAPS snapshot"
+          file_pattern: data/raw/MAPS/**
