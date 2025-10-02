@@ -102,5 +102,9 @@ python3.11 detect_rebalancing.py \
   --output-map reports/rebalancing_routes.html
 
 
+Alright, now we have a github action running every 5 mins (or supposed to run every 5 mins). So if everything goes right, we should see results in a few days.
+
+
 TODO  Isolate time of day activity per week day 
 TODO  Hook up a weather api for each station and see if amount of trips are correlated with rain.
+

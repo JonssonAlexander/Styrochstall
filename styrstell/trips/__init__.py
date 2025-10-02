@@ -10,7 +10,6 @@ from .aggregates import (
     build_edge_list,
     build_od_matrix,
     build_travel_time_distribution,
-    build_maps_lambda,
     export_edge_list_for_visualization,
 )
 
@@ -23,6 +22,5 @@ __all__ = [
     "build_edge_list",
     "build_od_matrix",
     "build_travel_time_distribution",
-    "build_maps_lambda",
     "export_edge_list_for_visualization",
 ]

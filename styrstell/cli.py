@@ -29,7 +29,6 @@ from styrstell.trips import (
     build_edge_list,
     build_od_matrix,
     build_travel_time_distribution,
-    build_maps_lambda,
     export_edge_list_for_visualization,
     infer_trips_from_timelines,
     iter_free_bike_snapshots,
@@ -232,12 +231,6 @@ def infer_maps_trips(
     trips_path = calibration_config.data.processed / "maps_trips.parquet"
     write_parquet(trips, trips_path)
     typer.echo(f"Maps trips saved to {trips_path}")
-
-    typer.echo("Estimating MAPS-based demand (lambda)...")
-    maps_lambda = build_maps_lambda(trips, interval_minutes=lambda_interval_minutes)
-    lambda_path = calibration_config.data.models / "maps_lambda.parquet"
-    write_parquet(maps_lambda, lambda_path)
-    typer.echo(f"MAPS lambda saved to {lambda_path}")
 
 
 @app.command("observed-od")

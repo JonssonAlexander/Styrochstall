@@ -74,24 +74,6 @@ def build_travel_time_distribution(trips: pd.DataFrame) -> pd.DataFrame:
     return distribution.sort_values("hour").reset_index(drop=True)
 
 
-def build_maps_lambda(trips: pd.DataFrame, interval_minutes: int = 60) -> pd.DataFrame:
-    """Estimate departures per station per interval from MAPS-inferred trips."""
-
-    if trips.empty:
-        return pd.DataFrame(columns=["timestamp", "station_id", "lambda_departures"])
-    data = trips.copy()
-    data["estimated_departure_time"] = pd.to_datetime(data["estimated_departure_time"], utc=True, errors="coerce")
-    data = data.dropna(subset=["estimated_departure_time", "origin_station_id"])
-    data["slot_start"] = data["estimated_departure_time"].dt.floor(f"{interval_minutes}min")
-    agg = (
-        data.groupby(["slot_start", "origin_station_id"]).size().reset_index(name="departures")
-    )
-    agg["lambda_departures"] = agg["departures"] / max(interval_minutes, 1)
-    agg = agg.rename(columns={"slot_start": "timestamp", "origin_station_id": "station_id"})
-    agg["timestamp"] = pd.to_datetime(agg["timestamp"], utc=True)
-    return agg[["timestamp", "station_id", "lambda_departures"]]
-
-
 def export_edge_list_for_visualization(edge_list: pd.DataFrame) -> pd.DataFrame:
     """Format the edge list for existing OD visualization code."""
 
