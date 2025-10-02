@@ -66,6 +66,9 @@ python3.11 plot_od_map.py \
   --output-path reports/observed_od_map.html
 
 # Station-activity heatmap (departures/arrivals/net; e.g. departures shown)
+
+This is a nice picture of activity (yellow dots that become larger if there are more departures/arrivals)
+
 python3.11 plot_station_activity_map.py \
   --trips data/processed/maps_trips.parquet \
   --metric departures \
