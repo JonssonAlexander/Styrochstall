@@ -27,4 +27,4 @@ jobs:
         env:
           PYTHONWARNINGS: ignore
         run: |
-          python scripts/populate_data.py --iterations 1
+          python populate_data.py --iterations 1
