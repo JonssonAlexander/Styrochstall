@@ -1,0 +1,30 @@
+name: Populate GBFS and MAPS Snapshots
+
+on:
+  schedule:
+    # GitHub only guarantees execution roughly every 5 minutes at best.
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  populate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install project
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Populate GBFS and MAPS snapshots
+        env:
+          PYTHONWARNINGS: ignore
+        run: |
+          python scripts/populate_data.py --iterations 1
