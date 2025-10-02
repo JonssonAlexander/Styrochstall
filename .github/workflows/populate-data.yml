@@ -5,9 +5,7 @@ on:
     # GitHub only guarantees execution roughly every 5 minutes at best.
     - cron: "*/5 * * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write   # <--- this is needed for pushes
+  
 
 jobs:
   populate:
