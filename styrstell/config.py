@@ -28,14 +28,14 @@ class GBFSFeedConfig(BaseModel):
     """GBFS feed endpoints and loader controls."""
 
     auto_discovery_url: str = Field(
-        default="https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zn/gbfs.json",
+        default="https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/gbfs.json",
         description="Root GBFS feed providing per-language endpoints.",
     )
     feeds: Dict[str, str] = Field(
         default_factory=lambda: {
-            "station_information": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zn/station_information.json",
-            "station_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zn/station_status.json",
-            "free_bike_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zn/free_bike_status.json",
+            "station_information": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/station_information.json",
+            "station_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/station_status.json",
+            "free_bike_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/free_bike_status.json",
         }
     )
     request_timeout: float = Field(default=10.0, ge=1.0)
