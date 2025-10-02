@@ -29,10 +29,11 @@ jobs:
         run: |
           python populate_data.py --iterations 1
 
-      - name: Upload snapshots artifact
-        uses: actions/upload-artifact@v4
+      - name: Commit & push snapshots
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: gbfs-maps-snapshots
-          path: |
-            data/raw/GBFS_git
-            data/raw/MAPS_git
+          commit_message: "chore(data): add GBFS/MAPS snapshot"
+          branch: data
+          file_pattern: |
+            data/raw/GBFS/**
+            data/raw/MAPS/**
