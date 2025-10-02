@@ -20,8 +20,8 @@ def run(
     station_path: Path = typer.Option(Path("data/processed/station_information.parquet"), help="Station metadata parquet with lat/lon."),
     flow_path: Path = typer.Option(Path("data/models/od_flow_matrix.parquet"), help="OD flow matrix parquet."),
     probability_path: Path = typer.Option(Path("data/models/od_probability_matrix.parquet"), help="OD probability matrix parquet."),
-    top_k: int = typer.Option(75, help="Number of strongest OD links to display (0 = all)."),
-    min_flow: float = typer.Option(1.0, help="Minimum flow weight to include when plotting."),
+    top_k: int = typer.Option(0, help="Number of strongest OD links to display (0 = all)."),
+    min_flow: float = typer.Option(0.0, help="Minimum flow weight to include when plotting."),
     annotate: bool = typer.Option(False, help="Whether to label stations on the markers."),
     label_top: int = typer.Option(10, help="Number of highest-capacity stations to label when --annotate is set (0 = none)."),
     boundary_path: Optional[Path] = typer.Option(
@@ -89,10 +89,12 @@ def _prepare_edge_table(flows: pd.DataFrame, top_k: int, min_flow: float) -> pd.
     df.loc[:, :] = matrix
     df = df.rename_axis(index="origin", columns="destination")
     stacked = df.stack().reset_index(name="flow")
-    filtered = stacked[stacked["flow"] >= min_flow]
+    filtered = stacked[stacked["flow"] > 0]
+    if min_flow > 0:
+        filtered = filtered[filtered["flow"] >= min_flow]
     if top_k > 0:
         filtered = filtered.sort_values("flow", ascending=False).head(top_k)
-    return filtered
+    return filtered.sort_values("flow", ascending=False)
 
 
 def _add_boundary(fmap: folium.Map, boundary_path: Path) -> None:
@@ -137,9 +139,9 @@ def _add_nodes(
         marker = folium.CircleMarker(
             location=(row["lat"], row["lon"]),
             radius=radius,
-            color="#1f77b4",
+            color="#2458a6",
             fill=True,
-            fill_opacity=0.8,
+            fill_opacity=0.75,
             weight=1,
             popup=popup_text,
         )
@@ -157,7 +159,12 @@ def _add_nodes(
 
 
 def _add_edges(fmap: folium.Map, edges: pd.DataFrame, stations: pd.DataFrame) -> None:
-    max_flow = edges["flow"].max() if not edges.empty else 1.0
+    if edges.empty:
+        return
+    min_flow = edges["flow"].min()
+    max_flow = edges["flow"].max()
+    if max_flow <= 0:
+        max_flow = 1.0
     for _, row in edges.iterrows():
         origin = row["origin"]
         dest = row["destination"]
@@ -166,14 +173,26 @@ def _add_edges(fmap: folium.Map, edges: pd.DataFrame, stations: pd.DataFrame) ->
         start = stations.loc[origin, ["lat", "lon"]]
         end = stations.loc[dest, ["lat", "lon"]]
         weight = row["flow"]
-        width = float(np.interp(weight, (0, max_flow), (1, 6)))
+        norm = 0.0 if max_flow == min_flow else (weight - min_flow) / (max_flow - min_flow)
+        width = float(np.interp(weight, (min_flow, max_flow), (1, 5)))
+        opacity = float(np.interp(weight, (min_flow, max_flow), (0.25, 0.85)))
         folium.PolyLine(
             locations=[(start["lat"], start["lon"]), (end["lat"], end["lon"])],
             weight=width,
-            color="#ff5733",
-            opacity=0.6,
+            color=_edge_color(norm),
+            opacity=opacity,
             popup=f"{origin} → {dest}: {weight:.2f}",
         ).add_to(fmap)
+
+
+def _edge_color(value: float) -> str:
+    value = max(0.0, min(1.0, value))
+    light = (198, 219, 239)
+    dark = (8, 48, 107)
+    r = int(light[0] + (dark[0] - light[0]) * value)
+    g = int(light[1] + (dark[1] - light[1]) * value)
+    b = int(light[2] + (dark[2] - light[2]) * value)
+    return f"#{r:02x}{g:02x}{b:02x}"
 
 
 if __name__ == "__main__":

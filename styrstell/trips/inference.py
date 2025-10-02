@@ -15,10 +15,10 @@ class TripInferenceConfig:
 
     min_duration_seconds: float = 60.0
     max_duration_seconds: float = 3 * 3600.0
-    min_distance_km: float = 0.05
+    min_distance_km: float = 0.00
     max_speed_kmph: float = 35.0
     ignore_nighttime: bool = True
-    nighttime_start_hour: int = 0
+    nighttime_start_hour: int = 1
     nighttime_end_hour: int = 5
     nighttime_max_duration_seconds: float = 90 * 60.0
 

@@ -10,7 +10,7 @@ import folium
 import pandas as pd
 import typer
 
-from scripts.compare_gbfs_maps import (
+from compare_gbfs_maps import (
     _aligned_timestamps,
     _load_gbfs_counts,
     _load_maps_counts,
@@ -79,7 +79,7 @@ def run(
         help="Longitude of the depot (used for slow-speed fallback).",
     ),
 ) -> None:
-    """Flag large station spikes and infer shortest routes using Dijkstra on a station graph."""
+    """Flag large station spikes and infer shortest routes using an assignment model."""
 
     calibration_cfg = cfg.load_calibration_config(config_path)
     data_paths = calibration_cfg.data
@@ -94,9 +94,7 @@ def run(
     station_info = pd.read_parquet(station_info_path)
     station_info["station_id"] = station_info["station_id"].astype(str)
     station_info["station_name"] = (
-        station_info.get("name")
-        .fillna(station_info.get("short_name"))
-        .fillna(station_info["station_id"])
+        station_info.get("name").fillna(station_info.get("short_name")).fillna(station_info["station_id"])
     )
     station_info = station_info.set_index("station_id")
 
@@ -107,67 +105,24 @@ def run(
     if not labels:
         raise RuntimeError("No aligned snapshots found between GBFS and MAPS feeds.")
 
-    # Build time series of station counts for the selected source feed
-    records: List[dict] = []
-    for label in labels:
-        ts = pd.to_datetime(label).tz_localize("UTC") if _needs_localize(label) else pd.to_datetime(label)
-        counts = _load_maps_counts(maps_root / label) if source == "MAPS" else _load_gbfs_counts(gbfs_root / label)
-        for station_id, value in counts.items():
-            records.append(
-                {
-                    "timestamp": ts,
-                    "station_id": station_id,
-                    "count": value,
-                }
-            )
-    if not records:
-        raise RuntimeError("No station counts available for spike detection.")
-
-    counts_df = pd.DataFrame(records)
-    pivot = counts_df.pivot_table(
-        index="timestamp",
-        columns="station_id",
-        values="count",
-        aggfunc="mean",
-    ).sort_index()
-    deltas = pivot.diff().dropna(how="all")
-
-    events = []
-    for timestamp, row in deltas.iterrows():
-        for station_id, change in row.items():
-            if pd.isna(change) or abs(change) < threshold:
-                continue
-            meta = station_info.loc[station_id] if station_id in station_info.index else None
-            label = _station_label(meta, station_id)
-            event_type = "pickup" if change < 0 else "dropoff"
-            events.append(
-                {
-                    "timestamp": timestamp,
-                    "station_id": station_id,
-                    "station_name": label,
-                    "change": int(change),
-                    "movement_type": event_type,
-                }
-            )
-
-    if not events:
+    events_df = _derive_events(labels, source, maps_root, gbfs_root, station_info, threshold)
+    if events_df.empty:
         typer.echo("No station spikes exceeded the threshold; nothing to report.")
         return
 
-    events_df = pd.DataFrame(events).sort_values("timestamp")
     ensure_directory(events_output.parent)
     events_df.to_parquet(events_output, index=False)
     typer.echo(f"Logged {len(events_df)} spike events to {events_output}")
 
-    # Build routing graph (k-nearest neighbors) and infer routes from pickups to dropoffs
     graph = _build_graph(station_info, k=neighbors)
-    routes = _infer_routes(
+    depot_coords = (depot_lat, depot_lon) if depot_lat is not None and depot_lon is not None else None
+    routes = _match_routes(
         events_df,
         station_info,
         graph,
         max_speed_kmph=max_speed_kmph,
         min_speed_kmph=min_speed_kmph,
-        depot_coords=(depot_lat, depot_lon) if depot_lat is not None and depot_lon is not None else None,
+        depot_coords=depot_coords,
     )
     routes_df = pd.DataFrame(routes)
     if not routes_df.empty:
@@ -183,7 +138,7 @@ def run(
     ensure_directory(output_map.parent)
     fmap = folium.Map(location=[station_info["lat"].mean(), station_info["lon"].mean()], zoom_start=12)
 
-    # Add spike markers
+    # Spike markers
     for _, row in events_df.iterrows():
         if row["station_id"] not in station_info.index:
             continue
@@ -204,45 +159,88 @@ def run(
             popup=tooltip,
         ).add_to(fmap)
 
-    if not routes_df.empty:
-        depot_coords = (depot_lat, depot_lon) if depot_lat is not None and depot_lon is not None else None
-        if depot_coords:
-            folium.Marker(
-                location=list(depot_coords),
-                icon=folium.Icon(color="black", icon="home", prefix="fa"),
-                popup="Depot",
-            ).add_to(fmap)
-        for _, route in routes_df.iterrows():
-            path_ids = route["path_station_ids"]
-            path_coords = []
-            for sid in path_ids:
-                if sid == "DEPOT" and depot_coords:
-                    path_coords.append(list(depot_coords))
-                elif sid in station_info.index:
-                    path_coords.append([station_info.loc[sid]["lat"], station_info.loc[sid]["lon"]])
-            if len(path_coords) < 2:
-                continue
-            tooltip = (
-                f"{route['timestamp'].tz_convert('UTC').strftime('%Y-%m-%d %H:%M:%S UTC')}<br>"
-                f"{route['origin_station_name']} → {route['destination_station_name']}<br>"
-                f"Bikes moved: {route['moved_bikes']}<br>"
-                f"Direct distance: {route['direct_distance_km']:.2f} km<br>"
-                f"Route distance: {route['path_distance_km']:.2f} km<br>"
-                f"Speed: {route['speed_kmph']:.2f} km/h"
-            )
-            folium.PolyLine(
-                locations=path_coords,
-                weight=2 + route["moved_bikes"],
-                color="purple",
-                opacity=0.7,
-                tooltip=tooltip,
-            ).add_to(fmap)
+    if depot_coords is not None:
+        folium.Marker(
+            location=list(depot_coords),
+            icon=folium.Icon(color="black", icon="home", prefix="fa"),
+            popup="Depot",
+        ).add_to(fmap)
+
+    for _, route in routes_df.iterrows():
+        path_coords = []
+        for station_id in route["path_station_ids"]:
+            if station_id == "DEPOT" and depot_coords is not None:
+                path_coords.append(list(depot_coords))
+            elif station_id in station_info.index:
+                meta = station_info.loc[station_id]
+                path_coords.append([meta["lat"], meta["lon"]])
+        if len(path_coords) < 2:
+            continue
+        tooltip = (
+            f"{route['timestamp'].tz_convert('UTC').strftime('%Y-%m-%d %H:%M:%S UTC')}<br>"
+            f"{route['origin_station_name']} → {route['destination_station_name']}<br>"
+            f"Bikes moved: {route['moved_bikes']}<br>"
+            f"Direct distance: {route['direct_distance_km']:.2f} km<br>"
+            f"Route distance: {route['path_distance_km']:.2f} km<br>"
+            f"Speed: {route['speed_kmph']:.2f} km/h"
+        )
+        folium.PolyLine(
+            locations=path_coords,
+            weight=2 + route["moved_bikes"],
+            color="purple",
+            opacity=0.7,
+            tooltip=tooltip,
+        ).add_to(fmap)
 
     fmap.save(output_map)
     typer.echo(f"Rebalancing map saved to {output_map}")
 
 
-def _infer_routes(
+def _derive_events(
+    labels: List[str],
+    source: str,
+    maps_root: Path,
+    gbfs_root: Path,
+    station_info: pd.DataFrame,
+    threshold: int,
+) -> pd.DataFrame:
+    records: List[dict] = []
+    for label in labels:
+        ts = pd.to_datetime(label).tz_localize("UTC") if _needs_localize(label) else pd.to_datetime(label)
+        counts = _load_maps_counts(maps_root / label) if source == "MAPS" else _load_gbfs_counts(gbfs_root / label)
+        for station_id, value in counts.items():
+            records.append({"timestamp": ts, "station_id": station_id, "count": value})
+
+    counts_df = pd.DataFrame(records)
+    pivot = (
+        counts_df.pivot_table(index="timestamp", columns="station_id", values="count", aggfunc="mean")
+        .fillna(0)
+        .sort_index()
+    )
+    deltas = pivot.diff().dropna(how="all")
+
+    events: List[dict] = []
+    for timestamp, row in deltas.iterrows():
+        for station_id, change in row.items():
+            if pd.isna(change) or abs(change) < threshold:
+                continue
+            if station_id not in station_info.index:
+                continue
+            meta = station_info.loc[station_id]
+            events.append(
+                {
+                    "timestamp": timestamp,
+                    "station_id": station_id,
+                    "station_name": _station_label(meta, station_id),
+                    "change": int(change),
+                    "movement_type": "pickup" if change < 0 else "dropoff",
+                }
+            )
+
+    return pd.DataFrame(events).sort_values("timestamp") if events else pd.DataFrame()
+
+
+def _match_routes(
     events_df: pd.DataFrame,
     station_info: pd.DataFrame,
     graph: Dict[str, List[Tuple[str, float]]],
@@ -252,95 +250,216 @@ def _infer_routes(
     depot_coords: Optional[Tuple[float, float]],
 ) -> List[dict]:
     routes: List[dict] = []
-    if events_df.empty:
-        return routes
+    open_pickups: List[dict] = []
+    depot = depot_coords
+    timestamps = sorted(events_df["timestamp"].unique())
 
-    pickups = events_df[events_df["movement_type"] == "pickup"]
-    dropoffs = events_df[events_df["movement_type"] == "dropoff"]
-    if pickups.empty or dropoffs.empty:
-        return routes
-
-    dropoff_pool: Dict[Tuple[pd.Timestamp, str], int] = {
-        (row["timestamp"], row["station_id"]): int(row["change"])
-        for _, row in dropoffs.iterrows()
-    }
-
-    for _, pickup in pickups.iterrows():
-        timestamp = pickup["timestamp"]
-        origin_id = pickup["station_id"]
-        moved_bikes = abs(int(pickup["change"]))
-        origin_meta = station_info.loc[origin_id] if origin_id in station_info.index else None
-        if origin_meta is None:
-            continue
-        origin_name = _station_label(origin_meta, origin_id)
-
-        best_dest = None
-        best_distance = math.inf
-        for (drop_ts, dest_id), drop_value in dropoff_pool.items():
-            if drop_ts != timestamp or drop_value <= 0:
+    for current_ts in timestamps:
+        # register new pickups available from this timestamp forward
+        for _, row in events_df[(events_df["movement_type"] == "pickup") & (events_df["timestamp"] == current_ts)].iterrows():
+            if row["station_id"] not in station_info.index:
                 continue
-            dest_meta = station_info.loc[dest_id] if dest_id in station_info.index else None
-            if dest_meta is None:
-                continue
-            distance = _haversine_km(
-                origin_meta["lat"], origin_meta["lon"], dest_meta["lat"], dest_meta["lon"]
-            )
-            if distance < best_distance:
-                best_distance = distance
-                best_dest = (dest_id, min(moved_bikes, drop_value), dest_meta)
-        if best_dest is None:
-            continue
-
-        dest_id, matched, dest_meta = best_dest
-        dropoff_pool[(timestamp, dest_id)] -= matched
-        if dropoff_pool[(timestamp, dest_id)] <= 0:
-            dropoff_pool.pop((timestamp, dest_id))
-
-        dest_name = _station_label(dest_meta, dest_id)
-        path_ids, path_distance = _dijkstra_path(origin_id, dest_id, graph, station_info)
-        time_delta_hours = _time_delta_hours(events_df, timestamp)
-        if time_delta_hours <= 0:
-            continue
-        speed = path_distance / time_delta_hours if path_distance > 0 else 0.0
-        if speed > max_speed_kmph:
-            continue
-        route_record = {
-            "timestamp": timestamp,
-            "origin_station_id": origin_id,
-            "origin_station_name": origin_name,
-            "destination_station_id": dest_id,
-            "destination_station_name": dest_name,
-            "moved_bikes": matched,
-            "direct_distance_km": best_distance,
-            "path_distance_km": path_distance,
-            "path_station_ids": path_ids,
-            "speed_kmph": speed,
-            "duration_hours": time_delta_hours,
-            "route_type": "standard",
-        }
-
-        if speed < min_speed_kmph and depot_coords is not None:
-            depot_distance = _haversine_km(
-                station_info.loc[origin_id]["lat"],
-                station_info.loc[origin_id]["lon"],
-                depot_coords[0],
-                depot_coords[1],
-            )
-            route_record.update(
+            open_pickups.append(
                 {
-                    "destination_station_id": "DEPOT",
-                    "destination_station_name": "Depot",
-                    "path_station_ids": [origin_id, "DEPOT"],
-                    "path_distance_km": depot_distance,
-                    "speed_kmph": depot_distance / time_delta_hours if time_delta_hours > 0 else 0.0,
-                    "route_type": "depot_return",
+                    "timestamp": row["timestamp"],
+                    "station_id": row["station_id"],
+                    "station_name": row["station_name"],
+                    "remaining": abs(int(row["change"])),
                 }
             )
-            dropoff_pool[(timestamp, dest_id)] = dropoff_pool.get((timestamp, dest_id), 0) + matched
 
-        routes.append(route_record)
+        drop_events = events_df[(events_df["movement_type"] == "dropoff") & (events_df["timestamp"] == current_ts)]
+        if drop_events.empty:
+            continue
+
+        for _, drop_event in drop_events.iterrows():
+            if drop_event["station_id"] not in station_info.index:
+                continue
+            demand = abs(int(drop_event["change"]))
+            if demand <= 0:
+                continue
+
+            eligible = [p for p in open_pickups if p["timestamp"] <= current_ts and p["remaining"] > 0]
+            if not eligible:
+                if depot is not None:
+                    for _ in range(demand):
+                        routes.append(
+                            _build_depot_route(
+                                {
+                                    "timestamp": drop_event["timestamp"],
+                                    "station_id": drop_event["station_id"],
+                                    "station_name": drop_event["station_name"],
+                                },
+                                depot,
+                                station_info,
+                                max_speed_kmph,
+                            )
+                        )
+                continue
+
+            # choose pickups greedily by distance then timestamp
+            selected_pickups: List[dict] = []
+            remaining_demand = demand
+            while remaining_demand > 0:
+                eligible = [p for p in open_pickups if p["timestamp"] <= current_ts and p["remaining"] > 0]
+                if not eligible:
+                    break
+                best = min(
+                    eligible,
+                    key=lambda p: (
+                        _haversine_km(
+                            station_info.loc[p["station_id"]]["lat"],
+                            station_info.loc[p["station_id"]]["lon"],
+                            station_info.loc[drop_event["station_id"]]["lat"],
+                            station_info.loc[drop_event["station_id"]]["lon"],
+                        ),
+                        p["timestamp"],
+                    ),
+                )
+                take = min(remaining_demand, best["remaining"])
+                selected_pickups.append(
+                    {
+                        "timestamp": best["timestamp"],
+                        "station_id": best["station_id"],
+                        "station_name": best["station_name"],
+                        "amount": take,
+                    }
+                )
+                best["remaining"] -= take
+                remaining_demand -= take
+                if best["remaining"] == 0:
+                    open_pickups.remove(best)
+
+            if remaining_demand > 0:
+                if depot is not None:
+                    for _ in range(remaining_demand):
+                        routes.append(
+                            _build_depot_route(
+                                {
+                                    "timestamp": drop_event["timestamp"],
+                                    "station_id": drop_event["station_id"],
+                                    "station_name": drop_event["station_name"],
+                                },
+                                depot,
+                                station_info,
+                                max_speed_kmph,
+                            )
+                        )
+                continue
+
+            if not selected_pickups:
+                continue
+
+            selected_pickups.sort(key=lambda item: item["timestamp"])
+            path_nodes = selected_pickups + [
+                {
+                    "timestamp": drop_event["timestamp"],
+                    "station_id": drop_event["station_id"],
+                    "station_name": drop_event["station_name"],
+                    "amount": 0,
+                }
+            ]
+
+            travel_start = selected_pickups[0]["timestamp"]
+            travel_hours = max((drop_event["timestamp"] - travel_start).total_seconds() / 3600.0, 1 / 12)
+            path_station_ids: List[str] = []
+            total_distance = 0.0
+
+            for idx in range(len(path_nodes) - 1):
+                current_node = path_nodes[idx]
+                next_node = path_nodes[idx + 1]
+                start_id = current_node["station_id"]
+                end_id = next_node["station_id"]
+                if start_id == end_id:
+                    continue
+                if (
+                    start_id not in station_info.index
+                    or end_id not in station_info.index
+                ):
+                    if depot_coords is None:
+                        continue
+                    if start_id == "DEPOT":
+                        start_lat, start_lon = depot_coords
+                    else:
+                        start_lat, start_lon = station_info.loc[start_id]["lat"], station_info.loc[start_id]["lon"]
+                    if end_id == "DEPOT":
+                        end_lat, end_lon = depot_coords
+                    else:
+                        end_lat, end_lon = station_info.loc[end_id]["lat"], station_info.loc[end_id]["lon"]
+                    leg_path = [start_id, end_id]
+                    leg_distance = _haversine_km(start_lat, start_lon, end_lat, end_lon)
+                else:
+                    leg_path, leg_distance = _dijkstra_path(start_id, end_id, graph, station_info)
+                    if leg_distance == math.inf:
+                        leg_distance = _haversine_km(
+                            station_info.loc[start_id]["lat"],
+                            station_info.loc[start_id]["lon"],
+                            station_info.loc[end_id]["lat"],
+                            station_info.loc[end_id]["lon"],
+                        )
+                        leg_path = [start_id, end_id]
+                if not path_station_ids:
+                    path_station_ids.extend(leg_path)
+                else:
+                    path_station_ids.extend(leg_path[1:])
+                total_distance += leg_distance
+
+            speed = total_distance / travel_hours if travel_hours > 0 else float("inf")
+            if speed > max_speed_kmph:
+                continue
+
+            route_type = "standard"
+            if speed < min_speed_kmph and depot is not None:
+                route_type = "depot_return"
+
+            moved_bikes = sum(item["amount"] for item in selected_pickups)
+            routes.append(
+                {
+                    "timestamp": drop_event["timestamp"],
+                    "origin_station_id": selected_pickups[0]["station_id"],
+                    "origin_station_name": selected_pickups[0]["station_name"],
+                    "destination_station_id": drop_event["station_id"],
+                    "destination_station_name": drop_event["station_name"],
+                    "moved_bikes": moved_bikes,
+                    "direct_distance_km": total_distance,
+                    "path_distance_km": total_distance,
+                    "path_station_ids": path_station_ids,
+                    "speed_kmph": speed,
+                    "duration_hours": travel_hours,
+                    "route_type": route_type,
+                }
+            )
 
     return routes
+
+
+def _build_depot_route(
+    drop: dict,
+    depot_coords: Tuple[float, float],
+    station_info: pd.DataFrame,
+    max_speed_kmph: float,
+) -> dict:
+    if drop["station_id"] in station_info.index:
+        dest = station_info.loc[drop["station_id"]]
+        distance = _haversine_km(depot_coords[0], depot_coords[1], dest["lat"], dest["lon"])
+    else:
+        distance = 0.0
+    travel_hours = max(distance / max_speed_kmph if max_speed_kmph > 0 else 0.25, 0.25)
+    speed = distance / travel_hours if travel_hours > 0 else 0.0
+    return {
+        "timestamp": drop["timestamp"],
+        "origin_station_id": "DEPOT",
+        "origin_station_name": "Depot",
+        "destination_station_id": drop["station_id"],
+        "destination_station_name": drop["station_name"],
+        "moved_bikes": drop.get("amount", 1),
+        "direct_distance_km": distance,
+        "path_distance_km": distance,
+        "path_station_ids": ["DEPOT", drop["station_id"]],
+        "speed_kmph": speed,
+        "duration_hours": travel_hours,
+        "route_type": "depot_delivery",
+    }
 
 
 def _station_label(meta: Optional[pd.Series], station_id: str) -> str:
@@ -422,16 +541,6 @@ def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return radius * c
-
-
-def _time_delta_hours(events_df: pd.DataFrame, timestamp: pd.Timestamp) -> float:
-    timestamps = events_df["timestamp"].sort_values().unique()
-    idx = list(timestamps).index(timestamp)
-    if idx == 0:
-        return 0.0
-    prev_ts = timestamps[idx - 1]
-    delta_hours = (timestamp - prev_ts).total_seconds() / 3600.0
-    return delta_hours
 
 
 if __name__ == "__main__":

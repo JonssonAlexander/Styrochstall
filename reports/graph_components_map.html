@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6ccfe580214941fc3660da947e6ab249 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6ccfe580214941fc3660da947e6ab249" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6ccfe580214941fc3660da947e6ab249 = L.map(
+                "map_6ccfe580214941fc3660da947e6ab249",
+                {
+                    center: [57.69552178518519, 11.971235733333332],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ea75946074dfcdce54d5171a760d425e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ea75946074dfcdce54d5171a760d425e.addTo(map_6ccfe580214941fc3660da947e6ab249);
+        
+    
+            var feature_group_3293596986ea09ac8c77027ad0b59728 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_3293596986ea09ac8c77027ad0b59728.addTo(map_6ccfe580214941fc3660da947e6ab249);
+        
+    
+            var feature_group_6737b443da4d17a75f4270a1f9d304d6 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_748e82d064590abb9904f7dacb163818 = L.circleMarker(
+                [57.698342, 11.967771],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_2caac0bcf2145d23b30a8125afe800fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27f816a1b2b4c6b069c1895b71ba0ac6 = $(`<div id="html_27f816a1b2b4c6b069c1895b71ba0ac6" style="width: 100.0%; height: 100.0%;">Vasagatan/Schillerska (SCC 8)</div>`)[0];
+                popup_2caac0bcf2145d23b30a8125afe800fa.setContent(html_27f816a1b2b4c6b069c1895b71ba0ac6);
+            
+        
+
+        circle_marker_748e82d064590abb9904f7dacb163818.bindPopup(popup_2caac0bcf2145d23b30a8125afe800fa)
+        ;
+
+        
+    
+    
+            var circle_marker_3d55a6590148e50558294bf8f5db6875 = L.circleMarker(
+                [57.701242, 11.957777],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_890887ee978ca079f41ac9dd3fe20098 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ca643e4f111fd3eb0b0b669ffef7e14 = $(`<div id="html_1ca643e4f111fd3eb0b0b669ffef7e14" style="width: 100.0%; height: 100.0%;">Rosenlundsplatsen (SCC 8)</div>`)[0];
+                popup_890887ee978ca079f41ac9dd3fe20098.setContent(html_1ca643e4f111fd3eb0b0b669ffef7e14);
+            
+        
+
+        circle_marker_3d55a6590148e50558294bf8f5db6875.bindPopup(popup_890887ee978ca079f41ac9dd3fe20098)
+        ;
+
+        
+    
+    
+            var circle_marker_298d24dc947fa59b517e9162604d0a08 = L.circleMarker(
+                [57.698429, 11.976702],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_e8c288191715f7d84d19c2ec764a247e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7996600c2d5c72a30440466bd28fc61 = $(`<div id="html_d7996600c2d5c72a30440466bd28fc61" style="width: 100.0%; height: 100.0%;">Engelbrektsgatan (SCC 8)</div>`)[0];
+                popup_e8c288191715f7d84d19c2ec764a247e.setContent(html_d7996600c2d5c72a30440466bd28fc61);
+            
+        
+
+        circle_marker_298d24dc947fa59b517e9162604d0a08.bindPopup(popup_e8c288191715f7d84d19c2ec764a247e)
+        ;
+
+        
+    
+    
+            var circle_marker_bf9f5b8319d2aaf948df2fa5d1ee1048 = L.circleMarker(
+                [57.720375, 11.952825],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_e116365c409be9c7611f82716cb5a613 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddfd1f224847037efbf99b5c62723541 = $(`<div id="html_ddfd1f224847037efbf99b5c62723541" style="width: 100.0%; height: 100.0%;">Hjalmar Brantingsplatsen (A) (SCC 8)</div>`)[0];
+                popup_e116365c409be9c7611f82716cb5a613.setContent(html_ddfd1f224847037efbf99b5c62723541);
+            
+        
+
+        circle_marker_bf9f5b8319d2aaf948df2fa5d1ee1048.bindPopup(popup_e116365c409be9c7611f82716cb5a613)
+        ;
+
+        
+    
+    
+            var circle_marker_26b8e18931e3ad2d258ef4b381c135df = L.circleMarker(
+                [57.716023, 11.945039],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_c01f1a84bc694b6a0835d1f5ced8d1bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf5627b3286f16cdcc6525f65d30a00e = $(`<div id="html_bf5627b3286f16cdcc6525f65d30a00e" style="width: 100.0%; height: 100.0%;">Jägaregatan (SCC 8)</div>`)[0];
+                popup_c01f1a84bc694b6a0835d1f5ced8d1bc.setContent(html_bf5627b3286f16cdcc6525f65d30a00e);
+            
+        
+
+        circle_marker_26b8e18931e3ad2d258ef4b381c135df.bindPopup(popup_c01f1a84bc694b6a0835d1f5ced8d1bc)
+        ;
+
+        
+    
+    
+            var circle_marker_d786d54f4d3d287cacde5672c4c447a6 = L.circleMarker(
+                [57.704477, 11.984271],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_2a4fa8f3eab8e192cb8490f6fdffe389 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3154e1abe099b1a955ca8097d1017e85 = $(`<div id="html_3154e1abe099b1a955ca8097d1017e85" style="width: 100.0%; height: 100.0%;">Bohusgatan (SCC 8)</div>`)[0];
+                popup_2a4fa8f3eab8e192cb8490f6fdffe389.setContent(html_3154e1abe099b1a955ca8097d1017e85);
+            
+        
+
+        circle_marker_d786d54f4d3d287cacde5672c4c447a6.bindPopup(popup_2a4fa8f3eab8e192cb8490f6fdffe389)
+        ;
+
+        
+    
+    
+            var circle_marker_e931ba9a5f5ed961a2dd16c6acad5d82 = L.circleMarker(
+                [57.707479, 11.963891],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_885e15644bd8c349bed81cf1a271b02a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61cde5de99f630e73670ecd27fa820e0 = $(`<div id="html_61cde5de99f630e73670ecd27fa820e0" style="width: 100.0%; height: 100.0%;">Postgatan (SCC 8)</div>`)[0];
+                popup_885e15644bd8c349bed81cf1a271b02a.setContent(html_61cde5de99f630e73670ecd27fa820e0);
+            
+        
+
+        circle_marker_e931ba9a5f5ed961a2dd16c6acad5d82.bindPopup(popup_885e15644bd8c349bed81cf1a271b02a)
+        ;
+
+        
+    
+    
+            var circle_marker_1bf66e39dc916cae9caf5cb94685200b = L.circleMarker(
+                [57.689168, 11.968226],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_a4223546731a2a0bb022b91a9cd1c205 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d516516abd45440f5615591ba32283c = $(`<div id="html_6d516516abd45440f5615591ba32283c" style="width: 100.0%; height: 100.0%;">Wavrinskys plats (A) (SCC 8)</div>`)[0];
+                popup_a4223546731a2a0bb022b91a9cd1c205.setContent(html_6d516516abd45440f5615591ba32283c);
+            
+        
+
+        circle_marker_1bf66e39dc916cae9caf5cb94685200b.bindPopup(popup_a4223546731a2a0bb022b91a9cd1c205)
+        ;
+
+        
+    
+    
+            var circle_marker_5344ef477224505bb3ecd302aa82a13a = L.circleMarker(
+                [57.700467, 11.953216],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_07dd7482997425936f73f099d924f99e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e25999a3d0ecf98c33b1af7c1c20686 = $(`<div id="html_9e25999a3d0ecf98c33b1af7c1c20686" style="width: 100.0%; height: 100.0%;">Olof Palmes Plats (A) (SCC 8)</div>`)[0];
+                popup_07dd7482997425936f73f099d924f99e.setContent(html_9e25999a3d0ecf98c33b1af7c1c20686);
+            
+        
+
+        circle_marker_5344ef477224505bb3ecd302aa82a13a.bindPopup(popup_07dd7482997425936f73f099d924f99e)
+        ;
+
+        
+    
+    
+            var circle_marker_f947d43e5d73c7cd3b0baf1afee8ecbb = L.circleMarker(
+                [57.704551, 11.969009],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_953b4592bd7b59249a7feecbab2fe675 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65c487aaee49e72c277a257031d6ef70 = $(`<div id="html_65c487aaee49e72c277a257031d6ef70" style="width: 100.0%; height: 100.0%;">Kungsportsplatsen/Östra Hamngatan (SCC 8)</div>`)[0];
+                popup_953b4592bd7b59249a7feecbab2fe675.setContent(html_65c487aaee49e72c277a257031d6ef70);
+            
+        
+
+        circle_marker_f947d43e5d73c7cd3b0baf1afee8ecbb.bindPopup(popup_953b4592bd7b59249a7feecbab2fe675)
+        ;
+
+        
+    
+    
+            var circle_marker_070362603705df8b88ad383634d89f3f = L.circleMarker(
+                [57.671152, 12.009609],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_7af57fb94fb2575c3eb3ec65a6ed102b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c237768514bb42739345a0b1a8ac2e9f = $(`<div id="html_c237768514bb42739345a0b1a8ac2e9f" style="width: 100.0%; height: 100.0%;">Krokslätts fabriker (A) (SCC 8)</div>`)[0];
+                popup_7af57fb94fb2575c3eb3ec65a6ed102b.setContent(html_c237768514bb42739345a0b1a8ac2e9f);
+            
+        
+
+        circle_marker_070362603705df8b88ad383634d89f3f.bindPopup(popup_7af57fb94fb2575c3eb3ec65a6ed102b)
+        ;
+
+        
+    
+    
+            var circle_marker_14fae44cff4f967fa83d1b57ca4fdabb = L.circleMarker(
+                [57.681802, 11.983083],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_48da9aaf389ddc423740ab63b869615f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d01098c91d0b1f4fcd7f43b81b4c46ee = $(`<div id="html_d01098c91d0b1f4fcd7f43b81b4c46ee" style="width: 100.0%; height: 100.0%;">Mossen (SCC 8)</div>`)[0];
+                popup_48da9aaf389ddc423740ab63b869615f.setContent(html_d01098c91d0b1f4fcd7f43b81b4c46ee);
+            
+        
+
+        circle_marker_14fae44cff4f967fa83d1b57ca4fdabb.bindPopup(popup_48da9aaf389ddc423740ab63b869615f)
+        ;
+
+        
+    
+    
+            var circle_marker_75064372fab04349441287812cdf9e2c = L.circleMarker(
+                [57.681715, 11.935658],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_84cf8af41ba8bbae6c405969b27dcdbb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53f6c20f5447c0627d8eb1c1fb3d162e = $(`<div id="html_53f6c20f5447c0627d8eb1c1fb3d162e" style="width: 100.0%; height: 100.0%;">Dalens idrottsplan (SCC 8)</div>`)[0];
+                popup_84cf8af41ba8bbae6c405969b27dcdbb.setContent(html_53f6c20f5447c0627d8eb1c1fb3d162e);
+            
+        
+
+        circle_marker_75064372fab04349441287812cdf9e2c.bindPopup(popup_84cf8af41ba8bbae6c405969b27dcdbb)
+        ;
+
+        
+    
+    
+            var circle_marker_80cae9d41d13de6292db3b1f11b1573e = L.circleMarker(
+                [57.700117, 11.987962],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_b2e0d0c281ebbc16195bd85507f34439 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e50c4e84010d215d3163d66c2f12e043 = $(`<div id="html_e50c4e84010d215d3163d66c2f12e043" style="width: 100.0%; height: 100.0%;">Scandinavium (SCC 8)</div>`)[0];
+                popup_b2e0d0c281ebbc16195bd85507f34439.setContent(html_e50c4e84010d215d3163d66c2f12e043);
+            
+        
+
+        circle_marker_80cae9d41d13de6292db3b1f11b1573e.bindPopup(popup_b2e0d0c281ebbc16195bd85507f34439)
+        ;
+
+        
+    
+    
+            var circle_marker_43f66de38145fd44485be5f90b11d8a0 = L.circleMarker(
+                [57.715599, 11.972684],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_a969933559583f18ed4627fd14f05377 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8ce225063c92ce5384a8557294d60d3 = $(`<div id="html_a8ce225063c92ce5384a8557294d60d3" style="width: 100.0%; height: 100.0%;">Gullbergsvass (SCC 8)</div>`)[0];
+                popup_a969933559583f18ed4627fd14f05377.setContent(html_a8ce225063c92ce5384a8557294d60d3);
+            
+        
+
+        circle_marker_43f66de38145fd44485be5f90b11d8a0.bindPopup(popup_a969933559583f18ed4627fd14f05377)
+        ;
+
+        
+    
+    
+            var circle_marker_e53a671ad9dd1cc72cf8a2292ecddd2b = L.circleMarker(
+                [57.721332, 11.934752],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_8f998dd5c576357418e6424402abd655 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4b18c80977f33e6bc59b2ce2cb5e0b3 = $(`<div id="html_d4b18c80977f33e6bc59b2ce2cb5e0b3" style="width: 100.0%; height: 100.0%;">Wieselgrensplatsen (A) (SCC 8)</div>`)[0];
+                popup_8f998dd5c576357418e6424402abd655.setContent(html_d4b18c80977f33e6bc59b2ce2cb5e0b3);
+            
+        
+
+        circle_marker_e53a671ad9dd1cc72cf8a2292ecddd2b.bindPopup(popup_8f998dd5c576357418e6424402abd655)
+        ;
+
+        
+    
+    
+            var circle_marker_9c39a870c4c12fb7fbdd0e11c9ff7a75 = L.circleMarker(
+                [57.703273, 11.959986],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_345e1c6ff7afcbd70dee5bb154535693 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94ea9ce9e4d780d1617c96ef454cc7a7 = $(`<div id="html_94ea9ce9e4d780d1617c96ef454cc7a7" style="width: 100.0%; height: 100.0%;">Kungsgatan/Telekasern (SCC 8)</div>`)[0];
+                popup_345e1c6ff7afcbd70dee5bb154535693.setContent(html_94ea9ce9e4d780d1617c96ef454cc7a7);
+            
+        
+
+        circle_marker_9c39a870c4c12fb7fbdd0e11c9ff7a75.bindPopup(popup_345e1c6ff7afcbd70dee5bb154535693)
+        ;
+
+        
+    
+    
+            var circle_marker_2b7796aa1a3a247c5e71e97393109684 = L.circleMarker(
+                [57.695921, 11.958664],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_fcbd883fde36284f7d1a89e40c7816cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e679f15ba8695bc79331d761c24942f0 = $(`<div id="html_e679f15ba8695bc79331d761c24942f0" style="width: 100.0%; height: 100.0%;">Skanstorget (SCC 8)</div>`)[0];
+                popup_fcbd883fde36284f7d1a89e40c7816cf.setContent(html_e679f15ba8695bc79331d761c24942f0);
+            
+        
+
+        circle_marker_2b7796aa1a3a247c5e71e97393109684.bindPopup(popup_fcbd883fde36284f7d1a89e40c7816cf)
+        ;
+
+        
+    
+    
+            var circle_marker_ce9e9c1f0da4705450a680f93a65770b = L.circleMarker(
+                [57.691293, 11.915182],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_cb668de7c5d856b536c4b394583ec970 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1a14306b5479f7d595f2c85f1caf293 = $(`<div id="html_a1a14306b5479f7d595f2c85f1caf293" style="width: 100.0%; height: 100.0%;">Jaegerdorffsplatsen (SCC 8)</div>`)[0];
+                popup_cb668de7c5d856b536c4b394583ec970.setContent(html_a1a14306b5479f7d595f2c85f1caf293);
+            
+        
+
+        circle_marker_ce9e9c1f0da4705450a680f93a65770b.bindPopup(popup_cb668de7c5d856b536c4b394583ec970)
+        ;
+
+        
+    
+    
+            var circle_marker_3f13b1c6d099607b4d25394931f1158e = L.circleMarker(
+                [57.715885, 11.910317],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_f9a4873388f77a9a7d0aeeb687024eab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a23c31ec686b7db707cf89af764244e = $(`<div id="html_9a23c31ec686b7db707cf89af764244e" style="width: 100.0%; height: 100.0%;">Eketrägatan (A) (SCC 8)</div>`)[0];
+                popup_f9a4873388f77a9a7d0aeeb687024eab.setContent(html_9a23c31ec686b7db707cf89af764244e);
+            
+        
+
+        circle_marker_3f13b1c6d099607b4d25394931f1158e.bindPopup(popup_f9a4873388f77a9a7d0aeeb687024eab)
+        ;
+
+        
+    
+    
+            var circle_marker_769434228c7b4c9e96066baa147a12ea = L.circleMarker(
+                [57.70726, 11.938266],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_2bfa4667d7856363de91c768e27bb612 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0759f27b2ffba552e73d74efc5a0a41 = $(`<div id="html_c0759f27b2ffba552e73d74efc5a0a41" style="width: 100.0%; height: 100.0%;">Lindholmsplatsen (A) (SCC 8)</div>`)[0];
+                popup_2bfa4667d7856363de91c768e27bb612.setContent(html_c0759f27b2ffba552e73d74efc5a0a41);
+            
+        
+
+        circle_marker_769434228c7b4c9e96066baa147a12ea.bindPopup(popup_2bfa4667d7856363de91c768e27bb612)
+        ;
+
+        
+    
+    
+            var circle_marker_e28c317c97e75f81ab528eb5a5fa40e5 = L.circleMarker(
+                [57.705722, 11.940167],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_4c4d699a128eec2767f274ff4289fe5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4fb315cd100a2b4d78e22b2048a73b8 = $(`<div id="html_a4fb315cd100a2b4d78e22b2048a73b8" style="width: 100.0%; height: 100.0%;">Lindholmspiren (A) (SCC 8)</div>`)[0];
+                popup_4c4d699a128eec2767f274ff4289fe5c.setContent(html_a4fb315cd100a2b4d78e22b2048a73b8);
+            
+        
+
+        circle_marker_e28c317c97e75f81ab528eb5a5fa40e5.bindPopup(popup_4c4d699a128eec2767f274ff4289fe5c)
+        ;
+
+        
+    
+    
+            var circle_marker_61bb99c78a906ae6e984f13b5bd527bf = L.circleMarker(
+                [57.692583, 11.973987],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_74783d98fcdb7a83a25b8d284dc2bfb7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6c1b92ddfe6ec1ed115833a52d2d39b = $(`<div id="html_e6c1b92ddfe6ec1ed115833a52d2d39b" style="width: 100.0%; height: 100.0%;">Kapellplatsen (SCC 8)</div>`)[0];
+                popup_74783d98fcdb7a83a25b8d284dc2bfb7.setContent(html_e6c1b92ddfe6ec1ed115833a52d2d39b);
+            
+        
+
+        circle_marker_61bb99c78a906ae6e984f13b5bd527bf.bindPopup(popup_74783d98fcdb7a83a25b8d284dc2bfb7)
+        ;
+
+        
+    
+    
+            var circle_marker_67b33b94acdb238ecf37f0e0fec0a4d3 = L.circleMarker(
+                [57.699934, 11.976213],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_deafa5127fd6a1ddc2241e18a8c9ef26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_940a97c0630b87f14d336d3facff6378 = $(`<div id="html_940a97c0630b87f14d336d3facff6378" style="width: 100.0%; height: 100.0%;">Kristinelundsgatan (SCC 8)</div>`)[0];
+                popup_deafa5127fd6a1ddc2241e18a8c9ef26.setContent(html_940a97c0630b87f14d336d3facff6378);
+            
+        
+
+        circle_marker_67b33b94acdb238ecf37f0e0fec0a4d3.bindPopup(popup_deafa5127fd6a1ddc2241e18a8c9ef26)
+        ;
+
+        
+    
+    
+            var circle_marker_510a6adfdc82cc610e5ad61740a39203 = L.circleMarker(
+                [57.698655, 11.956424],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_466cadb5d3f54dc0273614571d1a6cfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_847afb0e99e28c138d66ddedd79c2849 = $(`<div id="html_847afb0e99e28c138d66ddedd79c2849" style="width: 100.0%; height: 100.0%;">Kaponjärsgatan (A) (SCC 8)</div>`)[0];
+                popup_466cadb5d3f54dc0273614571d1a6cfa.setContent(html_847afb0e99e28c138d66ddedd79c2849);
+            
+        
+
+        circle_marker_510a6adfdc82cc610e5ad61740a39203.bindPopup(popup_466cadb5d3f54dc0273614571d1a6cfa)
+        ;
+
+        
+    
+    
+            var circle_marker_b776b9d12d16558e04ef7159b401e508 = L.circleMarker(
+                [57.704582, 11.992474],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_43681586e04885ed46288939f5e44070 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92fbca011db5f8a56963ccacf47c7719 = $(`<div id="html_92fbca011db5f8a56963ccacf47c7719" style="width: 100.0%; height: 100.0%;">Gårdatorget (A) (SCC 8)</div>`)[0];
+                popup_43681586e04885ed46288939f5e44070.setContent(html_92fbca011db5f8a56963ccacf47c7719);
+            
+        
+
+        circle_marker_b776b9d12d16558e04ef7159b401e508.bindPopup(popup_43681586e04885ed46288939f5e44070)
+        ;
+
+        
+    
+    
+            var circle_marker_1365f3d82f2761d586a05ac4f424146a = L.circleMarker(
+                [57.701224, 11.992199],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_928e43e967283e713c0e215313a275e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecb59261ee577b5dd3fbad75b9c797e2 = $(`<div id="html_ecb59261ee577b5dd3fbad75b9c797e2" style="width: 100.0%; height: 100.0%;">Åvägen (SCC 8)</div>`)[0];
+                popup_928e43e967283e713c0e215313a275e4.setContent(html_ecb59261ee577b5dd3fbad75b9c797e2);
+            
+        
+
+        circle_marker_1365f3d82f2761d586a05ac4f424146a.bindPopup(popup_928e43e967283e713c0e215313a275e4)
+        ;
+
+        
+    
+    
+            var circle_marker_d5d4ec2c9237066f7c039b358e6564af = L.circleMarker(
+                [57.693601, 11.97193],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_8adca70e992658eab9748ff59ee63c80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a2c6b02e96daee1c9b4fc0db1f9451c = $(`<div id="html_3a2c6b02e96daee1c9b4fc0db1f9451c" style="width: 100.0%; height: 100.0%;">Landala torg (SCC 8)</div>`)[0];
+                popup_8adca70e992658eab9748ff59ee63c80.setContent(html_3a2c6b02e96daee1c9b4fc0db1f9451c);
+            
+        
+
+        circle_marker_d5d4ec2c9237066f7c039b358e6564af.bindPopup(popup_8adca70e992658eab9748ff59ee63c80)
+        ;
+
+        
+    
+    
+            var circle_marker_e8ba2570ecd602e0a60ef3a928e569f0 = L.circleMarker(
+                [57.707152, 11.96749],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_aa44a523b23fa60910057e1a75cc7fca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddd6b5e78c34c9b4533e7068e069528c = $(`<div id="html_ddd6b5e78c34c9b4533e7068e069528c" style="width: 100.0%; height: 100.0%;">Gustaf Adolfs torg (A) (SCC 8)</div>`)[0];
+                popup_aa44a523b23fa60910057e1a75cc7fca.setContent(html_ddd6b5e78c34c9b4533e7068e069528c);
+            
+        
+
+        circle_marker_e8ba2570ecd602e0a60ef3a928e569f0.bindPopup(popup_aa44a523b23fa60910057e1a75cc7fca)
+        ;
+
+        
+    
+    
+            var circle_marker_43cc23edb263fd613cf6a0f0f1939c38 = L.circleMarker(
+                [57.695263, 11.985067],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_fe3c40935b19b4661bfc6904c9bf1545 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e92d3a430a76239ec55e79c3ab7e4f64 = $(`<div id="html_e92d3a430a76239ec55e79c3ab7e4f64" style="width: 100.0%; height: 100.0%;">Renströmsgatan (SCC 8)</div>`)[0];
+                popup_fe3c40935b19b4661bfc6904c9bf1545.setContent(html_e92d3a430a76239ec55e79c3ab7e4f64);
+            
+        
+
+        circle_marker_43cc23edb263fd613cf6a0f0f1939c38.bindPopup(popup_fe3c40935b19b4661bfc6904c9bf1545)
+        ;
+
+        
+    
+    
+            var circle_marker_a8bcc58f3809c7e1ad2cc463fa2b2126 = L.circleMarker(
+                [57.690344, 11.988573],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_3af3e1599b985afa26df48f2c16100b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e38530a9e93f2d95e03b78df9714b230 = $(`<div id="html_e38530a9e93f2d95e03b78df9714b230" style="width: 100.0%; height: 100.0%;">Utlandagatan/Eklandagatan (SCC 8)</div>`)[0];
+                popup_3af3e1599b985afa26df48f2c16100b5.setContent(html_e38530a9e93f2d95e03b78df9714b230);
+            
+        
+
+        circle_marker_a8bcc58f3809c7e1ad2cc463fa2b2126.bindPopup(popup_3af3e1599b985afa26df48f2c16100b5)
+        ;
+
+        
+    
+    
+            var circle_marker_46bc7e50e4989c2fd7722f5a8626ee20 = L.circleMarker(
+                [57.693582, 11.958531],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_5f0db079590b33aaee9cffd6f2806889 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09a0f55189d00388bcfc07f40dfcb98f = $(`<div id="html_09a0f55189d00388bcfc07f40dfcb98f" style="width: 100.0%; height: 100.0%;">Brunnsgatan (SCC 8)</div>`)[0];
+                popup_5f0db079590b33aaee9cffd6f2806889.setContent(html_09a0f55189d00388bcfc07f40dfcb98f);
+            
+        
+
+        circle_marker_46bc7e50e4989c2fd7722f5a8626ee20.bindPopup(popup_5f0db079590b33aaee9cffd6f2806889)
+        ;
+
+        
+    
+    
+            var circle_marker_f249e58296934c46c934643cd06e85c6 = L.circleMarker(
+                [57.686915, 11.958232],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_bc0353e587293c90f2128f22ce4805f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca33dfd79dd14a48c1438c9a2b5a9e99 = $(`<div id="html_ca33dfd79dd14a48c1438c9a2b5a9e99" style="width: 100.0%; height: 100.0%;">Medicinareberget (SCC 8)</div>`)[0];
+                popup_bc0353e587293c90f2128f22ce4805f3.setContent(html_ca33dfd79dd14a48c1438c9a2b5a9e99);
+            
+        
+
+        circle_marker_f249e58296934c46c934643cd06e85c6.bindPopup(popup_bc0353e587293c90f2128f22ce4805f3)
+        ;
+
+        
+    
+    
+            var circle_marker_702307bd0e936d7c100e1841e27f14c2 = L.circleMarker(
+                [57.70241, 11.965318],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_9ca0d3444033b771862a4bdfeb0dbf03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51ad0a939a2dd38aa4852b008846bba5 = $(`<div id="html_51ad0a939a2dd38aa4852b008846bba5" style="width: 100.0%; height: 100.0%;">Grönsakstorget (SCC 8)</div>`)[0];
+                popup_9ca0d3444033b771862a4bdfeb0dbf03.setContent(html_51ad0a939a2dd38aa4852b008846bba5);
+            
+        
+
+        circle_marker_702307bd0e936d7c100e1841e27f14c2.bindPopup(popup_9ca0d3444033b771862a4bdfeb0dbf03)
+        ;
+
+        
+    
+    
+            var circle_marker_a3bdfd6249a08e0406c0bb78c401a380 = L.circleMarker(
+                [57.698718, 11.934371],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_44e172d6d90246190838991815c5cb3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e78da8104adf6ab791177ce947c62848 = $(`<div id="html_e78da8104adf6ab791177ce947c62848" style="width: 100.0%; height: 100.0%;">Stigbergstorget (SCC 8)</div>`)[0];
+                popup_44e172d6d90246190838991815c5cb3e.setContent(html_e78da8104adf6ab791177ce947c62848);
+            
+        
+
+        circle_marker_a3bdfd6249a08e0406c0bb78c401a380.bindPopup(popup_44e172d6d90246190838991815c5cb3e)
+        ;
+
+        
+    
+    
+            var circle_marker_c59c15934fc99411183a0ac6823cc8db = L.circleMarker(
+                [57.714869, 11.998419],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_cd646a1a5a3663ef7af54db5ccab158d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ecead146f9d9d7ce4019c0237131978 = $(`<div id="html_1ecead146f9d9d7ce4019c0237131978" style="width: 100.0%; height: 100.0%;">Olskrokstorget (A) (SCC 8)</div>`)[0];
+                popup_cd646a1a5a3663ef7af54db5ccab158d.setContent(html_1ecead146f9d9d7ce4019c0237131978);
+            
+        
+
+        circle_marker_c59c15934fc99411183a0ac6823cc8db.bindPopup(popup_cd646a1a5a3663ef7af54db5ccab158d)
+        ;
+
+        
+    
+    
+            var circle_marker_6b20fd3f968f0653abc9ae8aae71c4a1 = L.circleMarker(
+                [57.711745, 11.966214],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_2e7cad4367c6a575931d43d7e02c9e84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fddd6f9eb9d0d773d710d84ba5dfee0b = $(`<div id="html_fddd6f9eb9d0d773d710d84ba5dfee0b" style="width: 100.0%; height: 100.0%;">Lilla bommen (SCC 8)</div>`)[0];
+                popup_2e7cad4367c6a575931d43d7e02c9e84.setContent(html_fddd6f9eb9d0d773d710d84ba5dfee0b);
+            
+        
+
+        circle_marker_6b20fd3f968f0653abc9ae8aae71c4a1.bindPopup(popup_2e7cad4367c6a575931d43d7e02c9e84)
+        ;
+
+        
+    
+    
+            var circle_marker_6e644ebd28ad26c3b761960b6b255003 = L.circleMarker(
+                [57.717953, 11.955591],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_b0d29e95e465736b4ca53ea4d89529d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bb3079340564a6ba1841025858b3096 = $(`<div id="html_7bb3079340564a6ba1841025858b3096" style="width: 100.0%; height: 100.0%;">Kvillepiren (SCC 8)</div>`)[0];
+                popup_b0d29e95e465736b4ca53ea4d89529d2.setContent(html_7bb3079340564a6ba1841025858b3096);
+            
+        
+
+        circle_marker_6e644ebd28ad26c3b761960b6b255003.bindPopup(popup_b0d29e95e465736b4ca53ea4d89529d2)
+        ;
+
+        
+    
+    
+            var circle_marker_747a00724bc5608e97670e4055a57889 = L.circleMarker(
+                [57.710633, 11.943271],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_4902af8e05ca55254ff3616499f88393 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f39a564c0719e6263ef6a3901507c7c4 = $(`<div id="html_f39a564c0719e6263ef6a3901507c7c4" style="width: 100.0%; height: 100.0%;">Lindholmsallén/Regnbågsgatan (SCC 8)</div>`)[0];
+                popup_4902af8e05ca55254ff3616499f88393.setContent(html_f39a564c0719e6263ef6a3901507c7c4);
+            
+        
+
+        circle_marker_747a00724bc5608e97670e4055a57889.bindPopup(popup_4902af8e05ca55254ff3616499f88393)
+        ;
+
+        
+    
+    
+            var circle_marker_c0a4e741226e0cb3e6f2862c4e367826 = L.circleMarker(
+                [57.710193, 11.950906],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_beab8a9473be328e2a2ead69f145572c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be783f57de71471c642e40eaa08d9d62 = $(`<div id="html_be783f57de71471c642e40eaa08d9d62" style="width: 100.0%; height: 100.0%;">Lundbystrand (SCC 8)</div>`)[0];
+                popup_beab8a9473be328e2a2ead69f145572c.setContent(html_be783f57de71471c642e40eaa08d9d62);
+            
+        
+
+        circle_marker_c0a4e741226e0cb3e6f2862c4e367826.bindPopup(popup_beab8a9473be328e2a2ead69f145572c)
+        ;
+
+        
+    
+    
+            var circle_marker_64def5aad29e4159a5946f7034aec080 = L.circleMarker(
+                [57.708489, 11.975666],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_ac81c958163c594af5c6bd0cbb36abe8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b0a0eeaa61673bd10c148e30010a232 = $(`<div id="html_4b0a0eeaa61673bd10c148e30010a232" style="width: 100.0%; height: 100.0%;">Åkareplatsen (SCC 8)</div>`)[0];
+                popup_ac81c958163c594af5c6bd0cbb36abe8.setContent(html_4b0a0eeaa61673bd10c148e30010a232);
+            
+        
+
+        circle_marker_64def5aad29e4159a5946f7034aec080.bindPopup(popup_ac81c958163c594af5c6bd0cbb36abe8)
+        ;
+
+        
+    
+    
+            var circle_marker_b7d079dcd92975fee9c76697ad870e34 = L.circleMarker(
+                [57.68339, 11.950427],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_f3f37474073c036d3458826263a0eef5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b43f55871f45263d15bfb405b514bfe9 = $(`<div id="html_b43f55871f45263d15bfb405b514bfe9" style="width: 100.0%; height: 100.0%;">Botaniska trädgården (SCC 8)</div>`)[0];
+                popup_f3f37474073c036d3458826263a0eef5.setContent(html_b43f55871f45263d15bfb405b514bfe9);
+            
+        
+
+        circle_marker_b7d079dcd92975fee9c76697ad870e34.bindPopup(popup_f3f37474073c036d3458826263a0eef5)
+        ;
+
+        
+    
+    
+            var circle_marker_19b1ff78b64f0af5daa064219ed2d756 = L.circleMarker(
+                [57.690247, 11.951773],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_85cdf0f7f1b1f19bc0ec018064612168 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a137b04e4e91c3908db6b0c2db84a0b8 = $(`<div id="html_a137b04e4e91c3908db6b0c2db84a0b8" style="width: 100.0%; height: 100.0%;">Linnéplatsen (A) (SCC 8)</div>`)[0];
+                popup_85cdf0f7f1b1f19bc0ec018064612168.setContent(html_a137b04e4e91c3908db6b0c2db84a0b8);
+            
+        
+
+        circle_marker_19b1ff78b64f0af5daa064219ed2d756.bindPopup(popup_85cdf0f7f1b1f19bc0ec018064612168)
+        ;
+
+        
+    
+    
+            var circle_marker_82a6e5cb7961483d940dbcc456a7de5b = L.circleMarker(
+                [57.706985, 11.983874],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_1a641c06d19c773ffb900cf25e80146e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_690ab78e816124451192c0cba93f212b = $(`<div id="html_690ab78e816124451192c0cba93f212b" style="width: 100.0%; height: 100.0%;">Ullevigatan (SCC 8)</div>`)[0];
+                popup_1a641c06d19c773ffb900cf25e80146e.setContent(html_690ab78e816124451192c0cba93f212b);
+            
+        
+
+        circle_marker_82a6e5cb7961483d940dbcc456a7de5b.bindPopup(popup_1a641c06d19c773ffb900cf25e80146e)
+        ;
+
+        
+    
+    
+            var circle_marker_e86a6605f5ee208c65cb5e25f11f0c63 = L.circleMarker(
+                [57.69842, 11.9423],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_7393860bf4f013472305657d5128c2f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5880abd402c69d69f67053f82e81a242 = $(`<div id="html_5880abd402c69d69f67053f82e81a242" style="width: 100.0%; height: 100.0%;">Masthuggstorget (SCC 8)</div>`)[0];
+                popup_7393860bf4f013472305657d5128c2f3.setContent(html_5880abd402c69d69f67053f82e81a242);
+            
+        
+
+        circle_marker_e86a6605f5ee208c65cb5e25f11f0c63.bindPopup(popup_7393860bf4f013472305657d5128c2f3)
+        ;
+
+        
+    
+    
+            var circle_marker_80b449b2e66bf4736101bf15ab8c3af9 = L.circleMarker(
+                [57.7084, 11.966954],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_d7e42fad14ac6edbe9aabadee4b19405 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8891d0a933fa76d00a46e05c119e0711 = $(`<div id="html_8891d0a933fa76d00a46e05c119e0711" style="width: 100.0%; height: 100.0%;">Kronhusgatan/Östra Hamngatan (SCC 8)</div>`)[0];
+                popup_d7e42fad14ac6edbe9aabadee4b19405.setContent(html_8891d0a933fa76d00a46e05c119e0711);
+            
+        
+
+        circle_marker_80b449b2e66bf4736101bf15ab8c3af9.bindPopup(popup_d7e42fad14ac6edbe9aabadee4b19405)
+        ;
+
+        
+    
+    
+            var circle_marker_ac4ebe961c1a58fc8c73a5bf20cc0774 = L.circleMarker(
+                [57.713464, 11.967534],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_1718c5ef9589f6c49ca1f90210ab4d94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c74eee45933f57991e6dff9997c4d0ec = $(`<div id="html_c74eee45933f57991e6dff9997c4d0ec" style="width: 100.0%; height: 100.0%;">Läppstiftet (SCC 8)</div>`)[0];
+                popup_1718c5ef9589f6c49ca1f90210ab4d94.setContent(html_c74eee45933f57991e6dff9997c4d0ec);
+            
+        
+
+        circle_marker_ac4ebe961c1a58fc8c73a5bf20cc0774.bindPopup(popup_1718c5ef9589f6c49ca1f90210ab4d94)
+        ;
+
+        
+    
+    
+            var circle_marker_8cb10b85f9ee55656a3baed7b0c31fed = L.circleMarker(
+                [57.696762, 11.950997],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_f8b0c663c4445eedaabb334e65b585b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c77d58392e77fd2c1dc6785c16b4992 = $(`<div id="html_8c77d58392e77fd2c1dc6785c16b4992" style="width: 100.0%; height: 100.0%;">Hagabion (SCC 8)</div>`)[0];
+                popup_f8b0c663c4445eedaabb334e65b585b7.setContent(html_8c77d58392e77fd2c1dc6785c16b4992);
+            
+        
+
+        circle_marker_8cb10b85f9ee55656a3baed7b0c31fed.bindPopup(popup_f8b0c663c4445eedaabb334e65b585b7)
+        ;
+
+        
+    
+    
+            var circle_marker_5d341c46f65d4eeccd0927532926016f = L.circleMarker(
+                [57.685286, 11.984083],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_eba98a77ede7c492273f7c4885c63820 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f144d9cbcdfac8327ae7ef2a9c3c0107 = $(`<div id="html_f144d9cbcdfac8327ae7ef2a9c3c0107" style="width: 100.0%; height: 100.0%;">Gibraltargatan/Eklandagatan (SCC 8)</div>`)[0];
+                popup_eba98a77ede7c492273f7c4885c63820.setContent(html_f144d9cbcdfac8327ae7ef2a9c3c0107);
+            
+        
+
+        circle_marker_5d341c46f65d4eeccd0927532926016f.bindPopup(popup_eba98a77ede7c492273f7c4885c63820)
+        ;
+
+        
+    
+    
+            var circle_marker_2862cc62c1bd6514442011ffb8e12b9c = L.circleMarker(
+                [57.692996, 11.986717],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_c3df5a25d1c59fdd8c3d34d94212b113 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6ef25676b75f7501047e6e870d9d5da = $(`<div id="html_b6ef25676b75f7501047e6e870d9d5da" style="width: 100.0%; height: 100.0%;">Carlandersplatsen (SCC 8)</div>`)[0];
+                popup_c3df5a25d1c59fdd8c3d34d94212b113.setContent(html_b6ef25676b75f7501047e6e870d9d5da);
+            
+        
+
+        circle_marker_2862cc62c1bd6514442011ffb8e12b9c.bindPopup(popup_c3df5a25d1c59fdd8c3d34d94212b113)
+        ;
+
+        
+    
+    
+            var circle_marker_02f3475170386e4ca4f559df0763908c = L.circleMarker(
+                [57.705692, 11.956843],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_4b9cc2352fa0c319ad6eba6520045a0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fa9cdd707dff644c0d1952649f7dc7a = $(`<div id="html_1fa9cdd707dff644c0d1952649f7dc7a" style="width: 100.0%; height: 100.0%;">Stenpiren (A) (SCC 8)</div>`)[0];
+                popup_4b9cc2352fa0c319ad6eba6520045a0c.setContent(html_1fa9cdd707dff644c0d1952649f7dc7a);
+            
+        
+
+        circle_marker_02f3475170386e4ca4f559df0763908c.bindPopup(popup_4b9cc2352fa0c319ad6eba6520045a0c)
+        ;
+
+        
+    
+    
+            var circle_marker_8dcc9ec50d8248eb71bd70d5d2f36f2d = L.circleMarker(
+                [57.704689, 11.990669],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_356526225b6817dedeb9e234ef11486c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47b11468ab96741053a73a95dcd9fe9a = $(`<div id="html_47b11468ab96741053a73a95dcd9fe9a" style="width: 100.0%; height: 100.0%;">Åvägen norra (SCC 8)</div>`)[0];
+                popup_356526225b6817dedeb9e234ef11486c.setContent(html_47b11468ab96741053a73a95dcd9fe9a);
+            
+        
+
+        circle_marker_8dcc9ec50d8248eb71bd70d5d2f36f2d.bindPopup(popup_356526225b6817dedeb9e234ef11486c)
+        ;
+
+        
+    
+    
+            var circle_marker_ef3c1a5ececa56686dee573320d359af = L.circleMarker(
+                [57.689784, 11.973249],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_e6ea16c078dd0d74af10e89a7c4b3b57 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6b4031013e75abf4fcd4110dce645f0 = $(`<div id="html_e6b4031013e75abf4fcd4110dce645f0" style="width: 100.0%; height: 100.0%;">Chalmersplatsen (A) (SCC 8)</div>`)[0];
+                popup_e6ea16c078dd0d74af10e89a7c4b3b57.setContent(html_e6b4031013e75abf4fcd4110dce645f0);
+            
+        
+
+        circle_marker_ef3c1a5ececa56686dee573320d359af.bindPopup(popup_e6ea16c078dd0d74af10e89a7c4b3b57)
+        ;
+
+        
+    
+    
+            var circle_marker_abf49aa951459a789c9b0705140dfddd = L.circleMarker(
+                [57.681076, 12.000622],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_0175a5f7e54607300fbfaf1ab18a15bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22822feaa9471eb707727d5504a42bc5 = $(`<div id="html_22822feaa9471eb707727d5504a42bc5" style="width: 100.0%; height: 100.0%;">Falkenbergsgatan (SCC 8)</div>`)[0];
+                popup_0175a5f7e54607300fbfaf1ab18a15bb.setContent(html_22822feaa9471eb707727d5504a42bc5);
+            
+        
+
+        circle_marker_abf49aa951459a789c9b0705140dfddd.bindPopup(popup_0175a5f7e54607300fbfaf1ab18a15bb)
+        ;
+
+        
+    
+    
+            var circle_marker_99033c06c6112c64496a643a2958886b = L.circleMarker(
+                [57.685435, 11.977801],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_ad6bd1d1d77b7c817f6aa8337aac2788 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_216bb3994215d2a49780f3da3832eadd = $(`<div id="html_216bb3994215d2a49780f3da3832eadd" style="width: 100.0%; height: 100.0%;">Sven Hultins plats (SCC 8)</div>`)[0];
+                popup_ad6bd1d1d77b7c817f6aa8337aac2788.setContent(html_216bb3994215d2a49780f3da3832eadd);
+            
+        
+
+        circle_marker_99033c06c6112c64496a643a2958886b.bindPopup(popup_ad6bd1d1d77b7c817f6aa8337aac2788)
+        ;
+
+        
+    
+    
+            var circle_marker_fae5e71aacd732ba67c34d783de40911 = L.circleMarker(
+                [57.696931, 11.985616],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_e0cc231f5f8a63996b4aa73eb816a0e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_703388ab90c07b19579881748b1722aa = $(`<div id="html_703388ab90c07b19579881748b1722aa" style="width: 100.0%; height: 100.0%;">Korsvägen/Södra vägen (A) (SCC 8)</div>`)[0];
+                popup_e0cc231f5f8a63996b4aa73eb816a0e2.setContent(html_703388ab90c07b19579881748b1722aa);
+            
+        
+
+        circle_marker_fae5e71aacd732ba67c34d783de40911.bindPopup(popup_e0cc231f5f8a63996b4aa73eb816a0e2)
+        ;
+
+        
+    
+    
+            var circle_marker_1382b4626d66513617fbcc0d35ee4ce6 = L.circleMarker(
+                [57.687107, 11.997463],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_d81f56576f6635604910147979e731da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9dcb1c75ed7c2591dffb52f2ce941776 = $(`<div id="html_9dcb1c75ed7c2591dffb52f2ce941776" style="width: 100.0%; height: 100.0%;">Almedal (SCC 8)</div>`)[0];
+                popup_d81f56576f6635604910147979e731da.setContent(html_9dcb1c75ed7c2591dffb52f2ce941776);
+            
+        
+
+        circle_marker_1382b4626d66513617fbcc0d35ee4ce6.bindPopup(popup_d81f56576f6635604910147979e731da)
+        ;
+
+        
+    
+    
+            var circle_marker_624f15d9eee72427873c17bf27fcfd2a = L.circleMarker(
+                [57.70149, 11.976648],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_3915e22b24c36a1eb9e2cdebd75d6cb1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a93159c9f27ef2331ecd850ca58221b = $(`<div id="html_9a93159c9f27ef2331ecd850ca58221b" style="width: 100.0%; height: 100.0%;">Vasagatan/Heden (SCC 8)</div>`)[0];
+                popup_3915e22b24c36a1eb9e2cdebd75d6cb1.setContent(html_9a93159c9f27ef2331ecd850ca58221b);
+            
+        
+
+        circle_marker_624f15d9eee72427873c17bf27fcfd2a.bindPopup(popup_3915e22b24c36a1eb9e2cdebd75d6cb1)
+        ;
+
+        
+    
+    
+            var circle_marker_1558fbdcc89da89fd49d30ca992e2e1e = L.circleMarker(
+                [57.69447, 11.961815],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_70e01db1e2a4462184727146014fcb58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c84a56947bef425a1796cdfa634453c = $(`<div id="html_5c84a56947bef425a1796cdfa634453c" style="width: 100.0%; height: 100.0%;">Föreningsgatan (SCC 8)</div>`)[0];
+                popup_70e01db1e2a4462184727146014fcb58.setContent(html_5c84a56947bef425a1796cdfa634453c);
+            
+        
+
+        circle_marker_1558fbdcc89da89fd49d30ca992e2e1e.bindPopup(popup_70e01db1e2a4462184727146014fcb58)
+        ;
+
+        
+    
+    
+            var circle_marker_1d32435331292a4b02ab45e34544b086 = L.circleMarker(
+                [57.697638, 11.961622],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_198dd4886ea2aa23763c7f96c1c456b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c97a806734b5a70bc08897e359a08fc = $(`<div id="html_6c97a806734b5a70bc08897e359a08fc" style="width: 100.0%; height: 100.0%;">Hagaparken (A) (SCC 8)</div>`)[0];
+                popup_198dd4886ea2aa23763c7f96c1c456b5.setContent(html_6c97a806734b5a70bc08897e359a08fc);
+            
+        
+
+        circle_marker_1d32435331292a4b02ab45e34544b086.bindPopup(popup_198dd4886ea2aa23763c7f96c1c456b5)
+        ;
+
+        
+    
+    
+            var circle_marker_74a301284249cbb07f22ae10d8817ef1 = L.circleMarker(
+                [57.692827, 11.955807],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_7ef1f595d18ff7cd1bed6144773e05a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4fa10d4f39fa7a836740bec7a96733f3 = $(`<div id="html_4fa10d4f39fa7a836740bec7a96733f3" style="width: 100.0%; height: 100.0%;">Kastellgatan (SCC 8)</div>`)[0];
+                popup_7ef1f595d18ff7cd1bed6144773e05a5.setContent(html_4fa10d4f39fa7a836740bec7a96733f3);
+            
+        
+
+        circle_marker_74a301284249cbb07f22ae10d8817ef1.bindPopup(popup_7ef1f595d18ff7cd1bed6144773e05a5)
+        ;
+
+        
+    
+    
+            var circle_marker_d645374318c2f0c20be92c1852c61941 = L.circleMarker(
+                [57.697907, 11.980875],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_03089720f0c98d1e9000ae0151509e7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d195b69940536d4b394c22cf76e893e = $(`<div id="html_1d195b69940536d4b394c22cf76e893e" style="width: 100.0%; height: 100.0%;">Berzeliigatan (SCC 8)</div>`)[0];
+                popup_03089720f0c98d1e9000ae0151509e7b.setContent(html_1d195b69940536d4b394c22cf76e893e);
+            
+        
+
+        circle_marker_d645374318c2f0c20be92c1852c61941.bindPopup(popup_03089720f0c98d1e9000ae0151509e7b)
+        ;
+
+        
+    
+    
+            var circle_marker_259db517f5cc2cdc8abbe545eaf02146 = L.circleMarker(
+                [57.697933, 11.995064],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_8befed468b4b32a23db700e3c34c6de9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9b5e93debb01de0754c1258108d3bb6 = $(`<div id="html_d9b5e93debb01de0754c1258108d3bb6" style="width: 100.0%; height: 100.0%;">Liseberg station (A) (SCC 8)</div>`)[0];
+                popup_8befed468b4b32a23db700e3c34c6de9.setContent(html_d9b5e93debb01de0754c1258108d3bb6);
+            
+        
+
+        circle_marker_259db517f5cc2cdc8abbe545eaf02146.bindPopup(popup_8befed468b4b32a23db700e3c34c6de9)
+        ;
+
+        
+    
+    
+            var circle_marker_5c674a99179f25ca5655797ee13dceb5 = L.circleMarker(
+                [57.708077, 11.972684],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_26f7b0bb3c6e02afb3752d0cba12f2fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba46e61bd68423e14365dab23f1f1810 = $(`<div id="html_ba46e61bd68423e14365dab23f1f1810" style="width: 100.0%; height: 100.0%;">Drottningtorget (A) (SCC 8)</div>`)[0];
+                popup_26f7b0bb3c6e02afb3752d0cba12f2fe.setContent(html_ba46e61bd68423e14365dab23f1f1810);
+            
+        
+
+        circle_marker_5c674a99179f25ca5655797ee13dceb5.bindPopup(popup_26f7b0bb3c6e02afb3752d0cba12f2fe)
+        ;
+
+        
+    
+    
+            var circle_marker_956f5a0c5f2cc67d738618a911a3280f = L.circleMarker(
+                [57.704222, 11.963993],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_68feb96227356ad671923eba8747c311 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d31a16681836e7fd03ee0004371e51d = $(`<div id="html_8d31a16681836e7fd03ee0004371e51d" style="width: 100.0%; height: 100.0%;">Domkyrkan (SCC 8)</div>`)[0];
+                popup_68feb96227356ad671923eba8747c311.setContent(html_8d31a16681836e7fd03ee0004371e51d);
+            
+        
+
+        circle_marker_956f5a0c5f2cc67d738618a911a3280f.bindPopup(popup_68feb96227356ad671923eba8747c311)
+        ;
+
+        
+    
+    
+            var circle_marker_f0c50a38445aa58360d9d2191d57329d = L.circleMarker(
+                [57.698241, 11.946471],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_c57e27cfe7799c8b07c29a23e819d73e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28f497fa02defed1fa59d0d5b84a576e = $(`<div id="html_28f497fa02defed1fa59d0d5b84a576e" style="width: 100.0%; height: 100.0%;">Tredje långgatan/Värmlandsgatan (SCC 8)</div>`)[0];
+                popup_c57e27cfe7799c8b07c29a23e819d73e.setContent(html_28f497fa02defed1fa59d0d5b84a576e);
+            
+        
+
+        circle_marker_f0c50a38445aa58360d9d2191d57329d.bindPopup(popup_c57e27cfe7799c8b07c29a23e819d73e)
+        ;
+
+        
+    
+    
+            var circle_marker_d808afee2fa1149266f199c80a57a9be = L.circleMarker(
+                [57.697736, 11.929998],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_e5770358a7adf8b6180135f0fcfb8422 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2d91b725d2f59b4a0d52eeb7bf34759 = $(`<div id="html_e2d91b725d2f59b4a0d52eeb7bf34759" style="width: 100.0%; height: 100.0%;">Kommendörsgatan (SCC 8)</div>`)[0];
+                popup_e5770358a7adf8b6180135f0fcfb8422.setContent(html_e2d91b725d2f59b4a0d52eeb7bf34759);
+            
+        
+
+        circle_marker_d808afee2fa1149266f199c80a57a9be.bindPopup(popup_e5770358a7adf8b6180135f0fcfb8422)
+        ;
+
+        
+    
+    
+            var circle_marker_17f5a6b66164a92769150e83a892bd64 = L.circleMarker(
+                [57.702499, 11.955555],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_c7b45a9001dccc09df2af83bc9e708cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b30912cc14b043c18baeb7fae8ae7839 = $(`<div id="html_b30912cc14b043c18baeb7fae8ae7839" style="width: 100.0%; height: 100.0%;">Esperantoplatsen (SCC 8)</div>`)[0];
+                popup_c7b45a9001dccc09df2af83bc9e708cf.setContent(html_b30912cc14b043c18baeb7fae8ae7839);
+            
+        
+
+        circle_marker_17f5a6b66164a92769150e83a892bd64.bindPopup(popup_c7b45a9001dccc09df2af83bc9e708cf)
+        ;
+
+        
+    
+    
+            var circle_marker_933cb7af63016213e0a9db0fc6458fe9 = L.circleMarker(
+                [57.700292, 11.973483],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff255", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+        var popup_4444733d387dcfa9dfed04fb11077d36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1af20273b6664370a2a9e71951989c99 = $(`<div id="html_1af20273b6664370a2a9e71951989c99" style="width: 100.0%; height: 100.0%;">Valand (A) (SCC 8)</div>`)[0];
+                popup_4444733d387dcfa9dfed04fb11077d36.setContent(html_1af20273b6664370a2a9e71951989c99);
+            
+        
+
+        circle_marker_933cb7af63016213e0a9db0fc6458fe9.bindPopup(popup_4444733d387dcfa9dfed04fb11077d36)
+        ;
+
+        
+    
+    
+            var poly_line_b38048d470504c501176f65716dab8f6 = L.polyline(
+                [[57.698342, 11.967771], [57.701242, 11.957777], [57.698429, 11.976702], [57.720375, 11.952825], [57.716023, 11.945039], [57.704477, 11.984271], [57.707479, 11.963891], [57.689168, 11.968226], [57.700467, 11.953216], [57.704551, 11.969009], [57.671152, 12.009609], [57.681802, 11.983083], [57.681715, 11.935658], [57.700117, 11.987962], [57.715599, 11.972684], [57.721332, 11.934752], [57.703273, 11.959986], [57.695921, 11.958664], [57.691293, 11.915182], [57.715885, 11.910317], [57.70726, 11.938266], [57.705722, 11.940167], [57.692583, 11.973987], [57.699934, 11.976213], [57.698655, 11.956424], [57.704582, 11.992474], [57.701224, 11.992199], [57.693601, 11.97193], [57.707152, 11.96749], [57.695263, 11.985067], [57.690344, 11.988573], [57.693582, 11.958531], [57.686915, 11.958232], [57.70241, 11.965318], [57.698718, 11.934371], [57.714869, 11.998419], [57.711745, 11.966214], [57.717953, 11.955591], [57.710633, 11.943271], [57.710193, 11.950906], [57.708489, 11.975666], [57.68339, 11.950427], [57.690247, 11.951773], [57.706985, 11.983874], [57.69842, 11.9423], [57.7084, 11.966954], [57.713464, 11.967534], [57.696762, 11.950997], [57.685286, 11.984083], [57.692996, 11.986717], [57.705692, 11.956843], [57.704689, 11.990669], [57.689784, 11.973249], [57.681076, 12.000622], [57.685435, 11.977801], [57.696931, 11.985616], [57.687107, 11.997463], [57.70149, 11.976648], [57.69447, 11.961815], [57.697638, 11.961622], [57.692827, 11.955807], [57.697907, 11.980875], [57.697933, 11.995064], [57.708077, 11.972684], [57.704222, 11.963993], [57.698241, 11.946471], [57.697736, 11.929998], [57.702499, 11.955555], [57.700292, 11.973483], [57.698342, 11.967771]],
+                {"bubblingMouseEvents": true, "color": "#eff255", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#eff255", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6737b443da4d17a75f4270a1f9d304d6);
+        
+    
+            poly_line_b38048d470504c501176f65716dab8f6.bindTooltip(
+                `<div>
+                     Cycle 8: Vasagatan/Schillerska → Rosenlundsplatsen → Engelbrektsgatan → Hjalmar Brantingsplatsen (A) → Jägaregatan → Bohusgatan → Postgatan → Wavrinskys plats (A) → Olof Palmes Plats (A) → Kungsportsplatsen/Östra Hamngatan → Krokslätts fabriker (A) → Mossen → Dalens idrottsplan → Scandinavium → Gullbergsvass → Wieselgrensplatsen (A) → Kungsgatan/Telekasern → Skanstorget → Jaegerdorffsplatsen → Eketrägatan (A) → Lindholmsplatsen (A) → Lindholmspiren (A) → Kapellplatsen → Kristinelundsgatan → Kaponjärsgatan (A) → Gårdatorget (A) → Åvägen → Landala torg → Gustaf Adolfs torg (A) → Renströmsgatan → Utlandagatan/Eklandagatan → Brunnsgatan → Medicinareberget → Grönsakstorget → Stigbergstorget → Olskrokstorget (A) → Lilla bommen → Kvillepiren → Lindholmsallén/Regnbågsgatan → Lundbystrand → Åkareplatsen → Botaniska trädgården → Linnéplatsen (A) → Ullevigatan → Masthuggstorget → Kronhusgatan/Östra Hamngatan → Läppstiftet → Hagabion → Gibraltargatan/Eklandagatan → Carlandersplatsen → Stenpiren (A) → Åvägen norra → Chalmersplatsen (A) → Falkenbergsgatan → Sven Hultins plats → Korsvägen/Södra vägen (A) → Almedal → Vasagatan/Heden → Föreningsgatan → Hagaparken (A) → Kastellgatan → Berzeliigatan → Liseberg station (A) → Drottningtorget (A) → Domkyrkan → Tredje långgatan/Värmlandsgatan → Kommendörsgatan → Esperantoplatsen → Valand (A)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_9b4e75fc9d0418c16ff6bfbab2219e19 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_9d703cdc22ad778447caf5efe43ec25f = L.circleMarker(
+                [57.655967, 12.019499],
+                {"bubblingMouseEvents": true, "color": "#5855f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5855f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9b4e75fc9d0418c16ff6bfbab2219e19);
+        
+    
+        var popup_7e2a4b882199198b5690adbb7523af51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5928177ad412b255e5537b5e84276b2 = $(`<div id="html_c5928177ad412b255e5537b5e84276b2" style="width: 100.0%; height: 100.0%;">Mölndals bro (SCC 4)</div>`)[0];
+                popup_7e2a4b882199198b5690adbb7523af51.setContent(html_c5928177ad412b255e5537b5e84276b2);
+            
+        
+
+        circle_marker_9d703cdc22ad778447caf5efe43ec25f.bindPopup(popup_7e2a4b882199198b5690adbb7523af51)
+        ;
+
+        
+    
+    
+            var circle_marker_2824dcdf05e022531b032336a039fd9c = L.circleMarker(
+                [57.656755, 12.027174],
+                {"bubblingMouseEvents": true, "color": "#5855f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5855f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9b4e75fc9d0418c16ff6bfbab2219e19);
+        
+    
+        var popup_c42a4d14946c5e2fbc748fa8500265b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9a2367e29b8c4eb1f96bbd53dbaf5ac = $(`<div id="html_f9a2367e29b8c4eb1f96bbd53dbaf5ac" style="width: 100.0%; height: 100.0%;">Gamla torget (SCC 4)</div>`)[0];
+                popup_c42a4d14946c5e2fbc748fa8500265b4.setContent(html_f9a2367e29b8c4eb1f96bbd53dbaf5ac);
+            
+        
+
+        circle_marker_2824dcdf05e022531b032336a039fd9c.bindPopup(popup_c42a4d14946c5e2fbc748fa8500265b4)
+        ;
+
+        
+    
+    
+            var poly_line_1ea9b66baa0954adeb64cedf5718db14 = L.polyline(
+                [[57.655967, 12.019499], [57.656755, 12.027174], [57.655967, 12.019499]],
+                {"bubblingMouseEvents": true, "color": "#5855f2", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#5855f2", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9b4e75fc9d0418c16ff6bfbab2219e19);
+        
+    
+            poly_line_1ea9b66baa0954adeb64cedf5718db14.bindTooltip(
+                `<div>
+                     Cycle 4: Mölndals bro → Gamla torget
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_7c05665a6ef6c3d11e64435e6746e4f6_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_ea75946074dfcdce54d5171a760d425e,
+                },
+                overlays :  {
+                    "Absorbing stations" : feature_group_3293596986ea09ac8c77027ad0b59728,
+                    "SCC 8" : feature_group_6737b443da4d17a75f4270a1f9d304d6,
+                    "SCC 4" : feature_group_9b4e75fc9d0418c16ff6bfbab2219e19,
+                },
+            };
+            let layer_control_7c05665a6ef6c3d11e64435e6746e4f6 = L.control.layers(
+                layer_control_7c05665a6ef6c3d11e64435e6746e4f6_layers.base_layers,
+                layer_control_7c05665a6ef6c3d11e64435e6746e4f6_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_6ccfe580214941fc3660da947e6ab249);
+
+        
+</script>
+</html>

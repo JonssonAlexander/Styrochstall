@@ -48,6 +48,8 @@ The notebooks in `notebooks/` demonstrate calibration diagnostics and policy com
 - `python3.11 scripts/compare_gbfs_maps.py`: Compare per-station bike counts between the GBFS station status feed and MAPS bike lists, producing a tidy parquet table, an interactive Plotly animation, and (with `--output-gif`) a GIF timeline.
 - `python3.11 scripts/detect_rebalancing.py`: Flag potential rebalancing movements by pairing large station count drops and spikes (writes spike events, inferred routes with Dijkstra, optional depot fallback, and a Folium map).
 - `python3.11 scripts/plot_station_activity_map.py`: Create a Folium map showing per-station trip activity (departures, arrivals, or net flow) based on an inferred trips parquet.
+- `python3.11 scripts/graph_diagnostics.py`: Analyse the observed OD graph for (near) absorbing stations and strongly connected components.
+- `python3.11 scripts/graph_components_map.py`: Visualise absorbing stations and strongly connected components on an interactive Folium map.
 
 Both commands accept a `--config` flag pointing to a JSON/YAML file matching the typed configuration schema in `styrstell/config.py`.
 

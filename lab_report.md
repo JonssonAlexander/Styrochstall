@@ -82,11 +82,14 @@ python3.11 compare_gbfs_maps.py \
   --output-gif reports/gbfs_vs_maps.gif
 
 # Detect and map suspected rebalancing routes
-python3.11 detect_rebalancing.py \
+python3.11 detect_rebalancing.py \    
   --config configs/calibration.yaml \
   --threshold 5 \
-  --output-parquet data/processed/rebalancing_events.parquet \
+  --events-output data/processed/rebalancing_events.parquet \
+  --routes-output data/processed/rebalancing_routes.parquet \
   --output-map reports/rebalancing_routes.html
+
+NOTE You can run it but it'll neeed some extra love for it to properly work. 
 
 to fix the rebalancing, this was what i prompted:
 note that rebalancing does not have to have a specific route. It just have to show where either a large departure spike or arrival spike happended. Also include the timestamp. Then use like dijkstras or something to come up with the shortest route from that and call that our car route.
@@ -107,7 +110,29 @@ python3.11 detect_rebalancing.py \
 
 Alright, now we have a github action running every 5 mins (or supposed to run every 5 mins). So if everything goes right, we should see results in a few days.
 
+If you just do it like the following code, it automatically creates what you need to be able to create the maps:
+
+python3.11 -m styrstell.cli infer-maps-trips --config configs/calibration.yaml
+python3.11 -m styrstell.cli observed-od --config configs/calibration.yaml --trips data/processed/maps_trips.parquet 
+
+Then run the plotting scripts.
+
+
+From the data we have, what to do?
+1. Want to estimate if the system survives change in trip length policy but too long between data gather intervals? Let's see if we can get it running on a local/good server. Nevertheless, if we have the Markov state space model, we should be able to bootstrap where people will go, and then use google maps data for travel time estimation, add some noise, use the normal amount of departures from each station and simulate the system. Then, we gradually add a percentage of "shoppers", i.e. people who use the service and parks it (maybe able to get that info but prob not necessary), and look at where the threshold for the system is. 
+
+
+Tried to do something with strongly connected components. this is what i have, i like the last one best but needs further refinments
+Recompute analytics (choose your own fraction):
+python3.11 graph_diagnostics.py --tidy-od data/models/observed_od_tidy.parquet --edge-threshold 0.2 --absorbing-output data/processed/absorbing_states.parquet --cycles-output data/processed/strongly_connected_components.parquet --dependency-output data/processed/station_dependencies.parquet --flow-summary-output data/processed/station_flow_summary.parquet
+Refresh the existing SCC map:
+python3.11 graph_components_map.py --station-info data/processed/station_information.parquet --absorbing data/processed/absorbing_states.parquet --components data/processed/strongly_connected_components.parquet --output reports/graph_components_map.html
+
+I think this to see graph dependencies:
+python3.11 graph_dependency_map.py --station-info data/processed/station_information.parquet --dependency-data data/processed/station_dependencies.parquet --flow-summary data/processed/station_flow_summary.parquet --share-threshold 0.2 --cross-share-threshold 0.3 --output reports/station_dependency_map.html
+
 
 TODO  Isolate time of day activity per week day 
 TODO  Hook up a weather api for each station and see if amount of trips are correlated with rain.
+
 
