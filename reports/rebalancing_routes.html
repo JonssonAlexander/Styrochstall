@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_42c0a34231fe53ae8d742b3351cdd861 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_42c0a34231fe53ae8d742b3351cdd861" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_42c0a34231fe53ae8d742b3351cdd861 = L.map(
+                "map_42c0a34231fe53ae8d742b3351cdd861",
+                {
+                    center: [57.69552178518519, 11.971235733333332],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0cc630f26d5476a2708ebc3f88ea8b32 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0cc630f26d5476a2708ebc3f88ea8b32.addTo(map_42c0a34231fe53ae8d742b3351cdd861);
+        
+    
+            var circle_marker_40368499cb0db308c0bec4482deef924 = L.circleMarker(
+                [57.708489, 11.975666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_42c0a34231fe53ae8d742b3351cdd861);
+        
+    
+        var popup_aa5d8b5889c997a238a340dce7d3c454 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4462639db56ef9118f26536580ec465e = $(`<div id="html_4462639db56ef9118f26536580ec465e" style="width: 100.0%; height: 100.0%;">2025-10-01 18:08:40 UTC<br>Åkareplatsen<br>Change: -4</div>`)[0];
+                popup_aa5d8b5889c997a238a340dce7d3c454.setContent(html_4462639db56ef9118f26536580ec465e);
+            
+        
+
+        circle_marker_40368499cb0db308c0bec4482deef924.bindPopup(popup_aa5d8b5889c997a238a340dce7d3c454)
+        ;
+
+        
+    
+    
+            var circle_marker_a57250375cab18845f54fdcccbc1b88b = L.circleMarker(
+                [57.685435, 11.977801],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_42c0a34231fe53ae8d742b3351cdd861);
+        
+    
+        var popup_8cb5ee97d54a49ba40206fe8c100a193 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75043a9ee63afca6c445d4086836f17a = $(`<div id="html_75043a9ee63afca6c445d4086836f17a" style="width: 100.0%; height: 100.0%;">2025-10-01 18:08:40 UTC<br>Sven Hultins plats<br>Change: 8</div>`)[0];
+                popup_8cb5ee97d54a49ba40206fe8c100a193.setContent(html_75043a9ee63afca6c445d4086836f17a);
+            
+        
+
+        circle_marker_a57250375cab18845f54fdcccbc1b88b.bindPopup(popup_8cb5ee97d54a49ba40206fe8c100a193)
+        ;
+
+        
+    
+    
+            var circle_marker_bcc7bfb0255ecacf3ec1c83de7297c51 = L.circleMarker(
+                [57.690247, 11.951773],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_42c0a34231fe53ae8d742b3351cdd861);
+        
+    
+        var popup_bade1527b0a855a1e7efd12196516e1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6c884899990984cade18d2c6848a112 = $(`<div id="html_a6c884899990984cade18d2c6848a112" style="width: 100.0%; height: 100.0%;">2025-10-01 18:09:14 UTC<br>Linnéplatsen (A)<br>Change: -9</div>`)[0];
+                popup_bade1527b0a855a1e7efd12196516e1e.setContent(html_a6c884899990984cade18d2c6848a112);
+            
+        
+
+        circle_marker_bcc7bfb0255ecacf3ec1c83de7297c51.bindPopup(popup_bade1527b0a855a1e7efd12196516e1e)
+        ;
+
+        
+    
+    
+            var circle_marker_8bc5cd6b6ceb04a4d27ba1de45d2c7df = L.circleMarker(
+                [57.689861, 11.979974],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_42c0a34231fe53ae8d742b3351cdd861);
+        
+    
+        var popup_ed5eb9ea3608686a2a673c6ef9847da1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d9e2370ba3e9c441c0f2622e17ebac1 = $(`<div id="html_3d9e2370ba3e9c441c0f2622e17ebac1" style="width: 100.0%; height: 100.0%;">2025-10-01 18:45:17 UTC<br>Chalmers tvärgata (A)<br>Change: 13</div>`)[0];
+                popup_ed5eb9ea3608686a2a673c6ef9847da1.setContent(html_3d9e2370ba3e9c441c0f2622e17ebac1);
+            
+        
+
+        circle_marker_8bc5cd6b6ceb04a4d27ba1de45d2c7df.bindPopup(popup_ed5eb9ea3608686a2a673c6ef9847da1)
+        ;
+
+        
+    
+    
+            var circle_marker_13666ff6532a934d94e0082e06d40ffd = L.circleMarker(
+                [57.704477, 11.984271],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_42c0a34231fe53ae8d742b3351cdd861);
+        
+    
+        var popup_04f949e34bf32474ba9516fc6f5b0755 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_498941f9fb820efe56f4ea0d4c4f00a2 = $(`<div id="html_498941f9fb820efe56f4ea0d4c4f00a2" style="width: 100.0%; height: 100.0%;">2025-10-01 19:07:14 UTC<br>Bohusgatan<br>Change: 6</div>`)[0];
+                popup_04f949e34bf32474ba9516fc6f5b0755.setContent(html_498941f9fb820efe56f4ea0d4c4f00a2);
+            
+        
+
+        circle_marker_13666ff6532a934d94e0082e06d40ffd.bindPopup(popup_04f949e34bf32474ba9516fc6f5b0755)
+        ;
+
+        
+    
+    
+            var circle_marker_6d8309f3f7aeba8eb9fc4f23a12bf678 = L.circleMarker(
+                [57.685286, 11.984083],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_42c0a34231fe53ae8d742b3351cdd861);
+        
+    
+        var popup_b00062becf8e2b34489bb52b3c5a3a82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd9614d818a50e912b3d1b452c955d16 = $(`<div id="html_fd9614d818a50e912b3d1b452c955d16" style="width: 100.0%; height: 100.0%;">2025-10-01 19:24:48 UTC<br>Gibraltargatan/Eklandagatan<br>Change: 8</div>`)[0];
+                popup_b00062becf8e2b34489bb52b3c5a3a82.setContent(html_fd9614d818a50e912b3d1b452c955d16);
+            
+        
+
+        circle_marker_6d8309f3f7aeba8eb9fc4f23a12bf678.bindPopup(popup_b00062becf8e2b34489bb52b3c5a3a82)
+        ;
+
+        
+    
+</script>
+</html>

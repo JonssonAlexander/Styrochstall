@@ -1,0 +1,2493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7c254db9e832f28644ac39ce3df17fd9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7c254db9e832f28644ac39ce3df17fd9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7c254db9e832f28644ac39ce3df17fd9 = L.map(
+                "map_7c254db9e832f28644ac39ce3df17fd9",
+                {
+                    center: [57.69812438461538, 11.96873929807692],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_59856580d32b599608c37443c95a85b3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_59856580d32b599608c37443c95a85b3.addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+            var circle_marker_81bb7181176eca7121d01ecb071465fb = L.circleMarker(
+                [57.675526, 11.994699],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_ed704c2d8b9dcaa6ebbf79bbe08ee08a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d9e6d1e14bac2641fe9ebd94e861962 = $(`<div id="html_4d9e6d1e14bac2641fe9ebd94e861962" style="width: 100.0%; height: 100.0%;"><b>Krokslätts parkgata</b><br>Departures: 1<br>Arrivals: 2<br>Departures: 1</div>`)[0];
+                popup_ed704c2d8b9dcaa6ebbf79bbe08ee08a.setContent(html_4d9e6d1e14bac2641fe9ebd94e861962);
+            
+        
+
+        circle_marker_81bb7181176eca7121d01ecb071465fb.bindPopup(popup_ed704c2d8b9dcaa6ebbf79bbe08ee08a)
+        ;
+
+        
+    
+    
+            var circle_marker_63efe6241a54f720b45deeb9072abc37 = L.circleMarker(
+                [57.691293, 11.915182],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_7328d4ad73eaa117d0de30e56438df7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90173935772211007a3a57561cfe42a0 = $(`<div id="html_90173935772211007a3a57561cfe42a0" style="width: 100.0%; height: 100.0%;"><b>Jaegerdorffsplatsen</b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_7328d4ad73eaa117d0de30e56438df7e.setContent(html_90173935772211007a3a57561cfe42a0);
+            
+        
+
+        circle_marker_63efe6241a54f720b45deeb9072abc37.bindPopup(popup_7328d4ad73eaa117d0de30e56438df7e)
+        ;
+
+        
+    
+    
+            var circle_marker_86b6d876cb0876d8bc0a772133dc4693 = L.circleMarker(
+                [57.666205, 12.011865],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_37efddc91f06bbffaa228bbc8457b970 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3b38123b4f080a8e5519cf8b9fd6cea = $(`<div id="html_f3b38123b4f080a8e5519cf8b9fd6cea" style="width: 100.0%; height: 100.0%;"><b>Lackarebäck (A)</b><br>Departures: 2<br>Arrivals: 1<br>Departures: 2</div>`)[0];
+                popup_37efddc91f06bbffaa228bbc8457b970.setContent(html_f3b38123b4f080a8e5519cf8b9fd6cea);
+            
+        
+
+        circle_marker_86b6d876cb0876d8bc0a772133dc4693.bindPopup(popup_37efddc91f06bbffaa228bbc8457b970)
+        ;
+
+        
+    
+    
+            var circle_marker_6ac5275cd4fd4e6b6be88f85a2b46744 = L.circleMarker(
+                [57.656097, 12.016837],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_e7ae52b9fcae7a93f251246448bd8bb3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_323534c55ecdbb2cc8b07e79b55f34ca = $(`<div id="html_323534c55ecdbb2cc8b07e79b55f34ca" style="width: 100.0%; height: 100.0%;"><b>Mölndals innerstad (A)</b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_e7ae52b9fcae7a93f251246448bd8bb3.setContent(html_323534c55ecdbb2cc8b07e79b55f34ca);
+            
+        
+
+        circle_marker_6ac5275cd4fd4e6b6be88f85a2b46744.bindPopup(popup_e7ae52b9fcae7a93f251246448bd8bb3)
+        ;
+
+        
+    
+    
+            var circle_marker_3d67dfd00bb06d723f32e9d32ead1655 = L.circleMarker(
+                [57.644, 12.017155],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_07fe3fed0d2c848edd1bc7533d0ca636 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2eda7bd15cd49c090d4bd620bd3216aa = $(`<div id="html_2eda7bd15cd49c090d4bd620bd3216aa" style="width: 100.0%; height: 100.0%;"><b>AstraZeneca (A)</b><br>Departures: 1<br>Arrivals: 0<br>Departures: 1</div>`)[0];
+                popup_07fe3fed0d2c848edd1bc7533d0ca636.setContent(html_2eda7bd15cd49c090d4bd620bd3216aa);
+            
+        
+
+        circle_marker_3d67dfd00bb06d723f32e9d32ead1655.bindPopup(popup_07fe3fed0d2c848edd1bc7533d0ca636)
+        ;
+
+        
+    
+    
+            var circle_marker_34c029283b70b88036a69d6bae7568c7 = L.circleMarker(
+                [57.700292, 11.973483],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.272727272727273, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_d8ec3ff5afcfd310b8592693fc7593dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f42939c2758ad93ddf7a25c62924363d = $(`<div id="html_f42939c2758ad93ddf7a25c62924363d" style="width: 100.0%; height: 100.0%;"><b>Valand (A)</b><br>Departures: 19<br>Arrivals: 13<br>Departures: 19</div>`)[0];
+                popup_d8ec3ff5afcfd310b8592693fc7593dc.setContent(html_f42939c2758ad93ddf7a25c62924363d);
+            
+        
+
+        circle_marker_34c029283b70b88036a69d6bae7568c7.bindPopup(popup_d8ec3ff5afcfd310b8592693fc7593dc)
+        ;
+
+        
+    
+    
+            var circle_marker_b29d5fb21f15ecdd6ef4143d14e241a5 = L.circleMarker(
+                [57.70241, 11.965318],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_8b6f6bb9a83e03b1043ed367cddc93d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0e018b402232182deef3e2675a82405 = $(`<div id="html_e0e018b402232182deef3e2675a82405" style="width: 100.0%; height: 100.0%;"><b>Grönsakstorget</b><br>Departures: 3<br>Arrivals: 0<br>Departures: 3</div>`)[0];
+                popup_8b6f6bb9a83e03b1043ed367cddc93d9.setContent(html_e0e018b402232182deef3e2675a82405);
+            
+        
+
+        circle_marker_b29d5fb21f15ecdd6ef4143d14e241a5.bindPopup(popup_8b6f6bb9a83e03b1043ed367cddc93d9)
+        ;
+
+        
+    
+    
+            var circle_marker_09673fd5bdbde1f936455f247a3dce79 = L.circleMarker(
+                [57.707152, 11.96749],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.0, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_c588c473e2614b896231b33be93233ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8222c4458985d73c2e9bcd246b4017db = $(`<div id="html_8222c4458985d73c2e9bcd246b4017db" style="width: 100.0%; height: 100.0%;"><b>Gustaf Adolfs torg (A)</b><br>Departures: 22<br>Arrivals: 2<br>Departures: 22</div>`)[0];
+                popup_c588c473e2614b896231b33be93233ce.setContent(html_8222c4458985d73c2e9bcd246b4017db);
+            
+        
+
+        circle_marker_09673fd5bdbde1f936455f247a3dce79.bindPopup(popup_c588c473e2614b896231b33be93233ce)
+        ;
+
+        
+    
+    
+            var circle_marker_c750ed21217e57382907b5f7cb72fcac = L.circleMarker(
+                [57.709382, 11.971916],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_13ae6ab8dbbd998a706c5302ad8583d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1a98c90be736bd911786581c7e83a87 = $(`<div id="html_c1a98c90be736bd911786581c7e83a87" style="width: 100.0%; height: 100.0%;"><b>Nils Ericson terminalen (A)</b><br>Departures: 1<br>Arrivals: 4<br>Departures: 1</div>`)[0];
+                popup_13ae6ab8dbbd998a706c5302ad8583d4.setContent(html_c1a98c90be736bd911786581c7e83a87);
+            
+        
+
+        circle_marker_c750ed21217e57382907b5f7cb72fcac.bindPopup(popup_13ae6ab8dbbd998a706c5302ad8583d4)
+        ;
+
+        
+    
+    
+            var circle_marker_659275fe6311a614e327535fb23a3196 = L.circleMarker(
+                [57.704582, 11.992474],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_d0c12b77131a675519c73c02b76dde29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4c8a34ad13e18e533d9f69a47c55910 = $(`<div id="html_a4c8a34ad13e18e533d9f69a47c55910" style="width: 100.0%; height: 100.0%;"><b>Gårdatorget (A)</b><br>Departures: 4<br>Arrivals: 0<br>Departures: 4</div>`)[0];
+                popup_d0c12b77131a675519c73c02b76dde29.setContent(html_a4c8a34ad13e18e533d9f69a47c55910);
+            
+        
+
+        circle_marker_659275fe6311a614e327535fb23a3196.bindPopup(popup_d0c12b77131a675519c73c02b76dde29)
+        ;
+
+        
+    
+    
+            var circle_marker_79beaf8c6589779273f4cc23f7406504 = L.circleMarker(
+                [57.696931, 11.985616],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.454545454545454, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_bc50b5046deb2fc4f4ccc089f0979ec6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_672982b517fc49f13910be616028d553 = $(`<div id="html_672982b517fc49f13910be616028d553" style="width: 100.0%; height: 100.0%;"><b>Korsvägen/Södra vägen (A)</b><br>Departures: 6<br>Arrivals: 5<br>Departures: 6</div>`)[0];
+                popup_bc50b5046deb2fc4f4ccc089f0979ec6.setContent(html_672982b517fc49f13910be616028d553);
+            
+        
+
+        circle_marker_79beaf8c6589779273f4cc23f7406504.bindPopup(popup_bc50b5046deb2fc4f4ccc089f0979ec6)
+        ;
+
+        
+    
+    
+            var circle_marker_b518f6c71c75e5c2642e712380964b02 = L.circleMarker(
+                [57.697638, 11.961622],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_771d44c8157db35daeb03c014a92b7c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3e23a259cfaef4719a025f921a065ed = $(`<div id="html_a3e23a259cfaef4719a025f921a065ed" style="width: 100.0%; height: 100.0%;"><b>Hagaparken (A)</b><br>Departures: 2<br>Arrivals: 4<br>Departures: 2</div>`)[0];
+                popup_771d44c8157db35daeb03c014a92b7c3.setContent(html_a3e23a259cfaef4719a025f921a065ed);
+            
+        
+
+        circle_marker_b518f6c71c75e5c2642e712380964b02.bindPopup(popup_771d44c8157db35daeb03c014a92b7c3)
+        ;
+
+        
+    
+    
+            var circle_marker_1a170362fe7769cf412f6c481b89304f = L.circleMarker(
+                [57.690247, 11.951773],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.545454545454545, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_e9ae93bcd5ebbaa52ec18a1807e2cdd6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a6232a57792ea4937ca1baeac4c665c = $(`<div id="html_3a6232a57792ea4937ca1baeac4c665c" style="width: 100.0%; height: 100.0%;"><b>Linnéplatsen (A)</b><br>Departures: 16<br>Arrivals: 0<br>Departures: 16</div>`)[0];
+                popup_e9ae93bcd5ebbaa52ec18a1807e2cdd6.setContent(html_3a6232a57792ea4937ca1baeac4c665c);
+            
+        
+
+        circle_marker_1a170362fe7769cf412f6c481b89304f.bindPopup(popup_e9ae93bcd5ebbaa52ec18a1807e2cdd6)
+        ;
+
+        
+    
+    
+            var circle_marker_68b32385e46d695d83238dac9036462e = L.circleMarker(
+                [57.708077, 11.972684],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2727272727272725, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_be715c44133d64dfaa478e5ff820fa13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c30a1a179563e84ea8406053a48b19f = $(`<div id="html_1c30a1a179563e84ea8406053a48b19f" style="width: 100.0%; height: 100.0%;"><b>Drottningtorget (A)</b><br>Departures: 8<br>Arrivals: 5<br>Departures: 8</div>`)[0];
+                popup_be715c44133d64dfaa478e5ff820fa13.setContent(html_1c30a1a179563e84ea8406053a48b19f);
+            
+        
+
+        circle_marker_68b32385e46d695d83238dac9036462e.bindPopup(popup_be715c44133d64dfaa478e5ff820fa13)
+        ;
+
+        
+    
+    
+            var circle_marker_b49555fa0925f2a7e9495c55ab9c5d8e = L.circleMarker(
+                [57.697907, 11.980875],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.545454545454545, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_23238a4e1b9fcc92056ba043389c2bae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a42c9d153727e0a0c515c469dad9bee2 = $(`<div id="html_a42c9d153727e0a0c515c469dad9bee2" style="width: 100.0%; height: 100.0%;"><b>Berzeliigatan</b><br>Departures: 5<br>Arrivals: 3<br>Departures: 5</div>`)[0];
+                popup_23238a4e1b9fcc92056ba043389c2bae.setContent(html_a42c9d153727e0a0c515c469dad9bee2);
+            
+        
+
+        circle_marker_b49555fa0925f2a7e9495c55ab9c5d8e.bindPopup(popup_23238a4e1b9fcc92056ba043389c2bae)
+        ;
+
+        
+    
+    
+            var circle_marker_a4af1356060c9684f031af83b7cb4526 = L.circleMarker(
+                [57.696762, 11.950997],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.363636363636363, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_38656ae0abebfeb83086e1bb39979f49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_351af7f9c9b7fdf417526445c1f56ba0 = $(`<div id="html_351af7f9c9b7fdf417526445c1f56ba0" style="width: 100.0%; height: 100.0%;"><b>Hagabion</b><br>Departures: 7<br>Arrivals: 6<br>Departures: 7</div>`)[0];
+                popup_38656ae0abebfeb83086e1bb39979f49.setContent(html_351af7f9c9b7fdf417526445c1f56ba0);
+            
+        
+
+        circle_marker_a4af1356060c9684f031af83b7cb4526.bindPopup(popup_38656ae0abebfeb83086e1bb39979f49)
+        ;
+
+        
+    
+    
+            var circle_marker_c979e02bb5f7f0a65ec814bc793f3392 = L.circleMarker(
+                [57.689784, 11.973249],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.909090909090908, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_0f4292016853126cabdb05ab2cb56cd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5acdd767f67c0fb7879db60294bd6853 = $(`<div id="html_5acdd767f67c0fb7879db60294bd6853" style="width: 100.0%; height: 100.0%;"><b>Chalmersplatsen (A)</b><br>Departures: 12<br>Arrivals: 3<br>Departures: 12</div>`)[0];
+                popup_0f4292016853126cabdb05ab2cb56cd4.setContent(html_5acdd767f67c0fb7879db60294bd6853);
+            
+        
+
+        circle_marker_c979e02bb5f7f0a65ec814bc793f3392.bindPopup(popup_0f4292016853126cabdb05ab2cb56cd4)
+        ;
+
+        
+    
+    
+            var circle_marker_6ed59c483361c30fd80ceebe3ca5e009 = L.circleMarker(
+                [57.69842, 11.9423],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.545454545454545, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_ded20a9c2c566429513ce4352565c45b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f83ff0e1aa7e81bf2c7eecd841c188ee = $(`<div id="html_f83ff0e1aa7e81bf2c7eecd841c188ee" style="width: 100.0%; height: 100.0%;"><b>Masthuggstorget</b><br>Departures: 5<br>Arrivals: 7<br>Departures: 5</div>`)[0];
+                popup_ded20a9c2c566429513ce4352565c45b.setContent(html_f83ff0e1aa7e81bf2c7eecd841c188ee);
+            
+        
+
+        circle_marker_6ed59c483361c30fd80ceebe3ca5e009.bindPopup(popup_ded20a9c2c566429513ce4352565c45b)
+        ;
+
+        
+    
+    
+            var circle_marker_5c97d26e07319b6a52b30e6c2e95f767 = L.circleMarker(
+                [57.704551, 11.969009],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.454545454545454, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_028e7e9d3b56bf8e2f989a7a1174261f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2de0f71c46eb7b0a31093e07454b5f88 = $(`<div id="html_2de0f71c46eb7b0a31093e07454b5f88" style="width: 100.0%; height: 100.0%;"><b>Kungsportsplatsen/Östra Hamngatan</b><br>Departures: 6<br>Arrivals: 1<br>Departures: 6</div>`)[0];
+                popup_028e7e9d3b56bf8e2f989a7a1174261f.setContent(html_2de0f71c46eb7b0a31093e07454b5f88);
+            
+        
+
+        circle_marker_5c97d26e07319b6a52b30e6c2e95f767.bindPopup(popup_028e7e9d3b56bf8e2f989a7a1174261f)
+        ;
+
+        
+    
+    
+            var circle_marker_1c8637b6f836bfea7eb5fa10fdcffac9 = L.circleMarker(
+                [57.712957, 11.991341],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_3a1e241f61057d57382b455792027583 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdb93f081474aeed1e9e6cbc67aff3ae = $(`<div id="html_bdb93f081474aeed1e9e6cbc67aff3ae" style="width: 100.0%; height: 100.0%;"><b>Svingeln (A)</b><br>Departures: 4<br>Arrivals: 1<br>Departures: 4</div>`)[0];
+                popup_3a1e241f61057d57382b455792027583.setContent(html_bdb93f081474aeed1e9e6cbc67aff3ae);
+            
+        
+
+        circle_marker_1c8637b6f836bfea7eb5fa10fdcffac9.bindPopup(popup_3a1e241f61057d57382b455792027583)
+        ;
+
+        
+    
+    
+            var circle_marker_e40e52748e3bdb7a9f4a040e1717b312 = L.circleMarker(
+                [57.705692, 11.956843],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_043b2af58523b1090b13b50bda7b61db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38296fc6644726fd6cbf87b4b7c04352 = $(`<div id="html_38296fc6644726fd6cbf87b4b7c04352" style="width: 100.0%; height: 100.0%;"><b>Stenpiren (A)</b><br>Departures: 2<br>Arrivals: 1<br>Departures: 2</div>`)[0];
+                popup_043b2af58523b1090b13b50bda7b61db.setContent(html_38296fc6644726fd6cbf87b4b7c04352);
+            
+        
+
+        circle_marker_e40e52748e3bdb7a9f4a040e1717b312.bindPopup(popup_043b2af58523b1090b13b50bda7b61db)
+        ;
+
+        
+    
+    
+            var circle_marker_01cfac7aaefca4349101ea99692d7b14 = L.circleMarker(
+                [57.714869, 11.998419],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_a75a51d6927669b47cea712148afc7cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f2a4f59a7300650cfbe6434b5ffc0a8 = $(`<div id="html_2f2a4f59a7300650cfbe6434b5ffc0a8" style="width: 100.0%; height: 100.0%;"><b>Olskrokstorget (A)</b><br>Departures: 1<br>Arrivals: 3<br>Departures: 1</div>`)[0];
+                popup_a75a51d6927669b47cea712148afc7cd.setContent(html_2f2a4f59a7300650cfbe6434b5ffc0a8);
+            
+        
+
+        circle_marker_01cfac7aaefca4349101ea99692d7b14.bindPopup(popup_a75a51d6927669b47cea712148afc7cd)
+        ;
+
+        
+    
+    
+            var circle_marker_0ea72905690cac454d3d6620ae24913b = L.circleMarker(
+                [57.7084, 11.966954],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_186cbcede0c68b97b60f949a988852d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db5e338a5dd7b459fe67ffb93c6ebbb8 = $(`<div id="html_db5e338a5dd7b459fe67ffb93c6ebbb8" style="width: 100.0%; height: 100.0%;"><b>Kronhusgatan/Östra Hamngatan</b><br>Departures: 2<br>Arrivals: 2<br>Departures: 2</div>`)[0];
+                popup_186cbcede0c68b97b60f949a988852d7.setContent(html_db5e338a5dd7b459fe67ffb93c6ebbb8);
+            
+        
+
+        circle_marker_0ea72905690cac454d3d6620ae24913b.bindPopup(popup_186cbcede0c68b97b60f949a988852d7)
+        ;
+
+        
+    
+    
+            var circle_marker_ba84966dad5d089de381b8577b721977 = L.circleMarker(
+                [57.70726, 11.938266],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_9b8c94a071ebe06075e0bba91a3333c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4013d62d56e832e2847742a6d68e55ff = $(`<div id="html_4013d62d56e832e2847742a6d68e55ff" style="width: 100.0%; height: 100.0%;"><b>Lindholmsplatsen (A)</b><br>Departures: 1<br>Arrivals: 2<br>Departures: 1</div>`)[0];
+                popup_9b8c94a071ebe06075e0bba91a3333c5.setContent(html_4013d62d56e832e2847742a6d68e55ff);
+            
+        
+
+        circle_marker_ba84966dad5d089de381b8577b721977.bindPopup(popup_9b8c94a071ebe06075e0bba91a3333c5)
+        ;
+
+        
+    
+    
+            var circle_marker_6cccddfb5be9ae7f2e0f930294d68eeb = L.circleMarker(
+                [57.704222, 11.963993],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2727272727272725, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_2da5c8efcfb21b28512278aa48c35218 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_478415a13ab49959f57a24ca757a67ad = $(`<div id="html_478415a13ab49959f57a24ca757a67ad" style="width: 100.0%; height: 100.0%;"><b>Domkyrkan</b><br>Departures: 8<br>Arrivals: 1<br>Departures: 8</div>`)[0];
+                popup_2da5c8efcfb21b28512278aa48c35218.setContent(html_478415a13ab49959f57a24ca757a67ad);
+            
+        
+
+        circle_marker_6cccddfb5be9ae7f2e0f930294d68eeb.bindPopup(popup_2da5c8efcfb21b28512278aa48c35218)
+        ;
+
+        
+    
+    
+            var circle_marker_aac37c5a908e179a2326ee86bf8e7614 = L.circleMarker(
+                [57.689168, 11.968226],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_d1634d6de6928aaf32d5a5a6f1f2eb20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f39e4a0b3846003d3c799f294ebedf81 = $(`<div id="html_f39e4a0b3846003d3c799f294ebedf81" style="width: 100.0%; height: 100.0%;"><b>Wavrinskys plats (A)</b><br>Departures: 3<br>Arrivals: 1<br>Departures: 3</div>`)[0];
+                popup_d1634d6de6928aaf32d5a5a6f1f2eb20.setContent(html_f39e4a0b3846003d3c799f294ebedf81);
+            
+        
+
+        circle_marker_aac37c5a908e179a2326ee86bf8e7614.bindPopup(popup_d1634d6de6928aaf32d5a5a6f1f2eb20)
+        ;
+
+        
+    
+    
+            var circle_marker_9de84e7f79c59465b9787f3f57f5d48b = L.circleMarker(
+                [57.715501, 12.003561],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_01c899b57d6138974d05ce6079dbe5de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6bbc5205ae1d003ab32bdaa33b833c46 = $(`<div id="html_6bbc5205ae1d003ab32bdaa33b833c46" style="width: 100.0%; height: 100.0%;"><b>Redbergsplatsen (A)</b><br>Departures: 2<br>Arrivals: 1<br>Departures: 2</div>`)[0];
+                popup_01c899b57d6138974d05ce6079dbe5de.setContent(html_6bbc5205ae1d003ab32bdaa33b833c46);
+            
+        
+
+        circle_marker_9de84e7f79c59465b9787f3f57f5d48b.bindPopup(popup_01c899b57d6138974d05ce6079dbe5de)
+        ;
+
+        
+    
+    
+            var circle_marker_ad05ad1878d434b2f34d7aa93d1f5cd7 = L.circleMarker(
+                [57.727428, 12.004718],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_3f38a248181399e85b9c4a37956ab847 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86a44ed4b88932e645197cdcc831280f = $(`<div id="html_86a44ed4b88932e645197cdcc831280f" style="width: 100.0%; height: 100.0%;"><b>Gamlestads torg (A)</b><br>Departures: 1<br>Arrivals: 4<br>Departures: 1</div>`)[0];
+                popup_3f38a248181399e85b9c4a37956ab847.setContent(html_86a44ed4b88932e645197cdcc831280f);
+            
+        
+
+        circle_marker_ad05ad1878d434b2f34d7aa93d1f5cd7.bindPopup(popup_3f38a248181399e85b9c4a37956ab847)
+        ;
+
+        
+    
+    
+            var circle_marker_4839e0d8100de71f6018a9d1978b39c3 = L.circleMarker(
+                [57.720375, 11.952825],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_0895eed3c54c14889645c47468cbdc14 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e3f4b23d0b3c0ebe22c6a3149239147 = $(`<div id="html_6e3f4b23d0b3c0ebe22c6a3149239147" style="width: 100.0%; height: 100.0%;"><b>Hjalmar Brantingsplatsen (A)</b><br>Departures: 2<br>Arrivals: 3<br>Departures: 2</div>`)[0];
+                popup_0895eed3c54c14889645c47468cbdc14.setContent(html_6e3f4b23d0b3c0ebe22c6a3149239147);
+            
+        
+
+        circle_marker_4839e0d8100de71f6018a9d1978b39c3.bindPopup(popup_0895eed3c54c14889645c47468cbdc14)
+        ;
+
+        
+    
+    
+            var circle_marker_52563e9e94aa6184cc22895e049911a6 = L.circleMarker(
+                [57.720823, 11.944587],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_588524c2b0ac994a8129c0466200cf85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7585e279af168bd6b910daf624d931a2 = $(`<div id="html_7585e279af168bd6b910daf624d931a2" style="width: 100.0%; height: 100.0%;"><b>Vågmästareplatsen (A)</b><br>Departures: 3<br>Arrivals: 7<br>Departures: 3</div>`)[0];
+                popup_588524c2b0ac994a8129c0466200cf85.setContent(html_7585e279af168bd6b910daf624d931a2);
+            
+        
+
+        circle_marker_52563e9e94aa6184cc22895e049911a6.bindPopup(popup_588524c2b0ac994a8129c0466200cf85)
+        ;
+
+        
+    
+    
+            var circle_marker_1ed5a8b921cf97456020732ce875902b = L.circleMarker(
+                [57.721332, 11.934752],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_99bc5aa5ee19b05b40ee9e6ecf813ede = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8eeca529608a7f1e8ea9d6ecb3a659c5 = $(`<div id="html_8eeca529608a7f1e8ea9d6ecb3a659c5" style="width: 100.0%; height: 100.0%;"><b>Wieselgrensplatsen (A)</b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_99bc5aa5ee19b05b40ee9e6ecf813ede.setContent(html_8eeca529608a7f1e8ea9d6ecb3a659c5);
+            
+        
+
+        circle_marker_1ed5a8b921cf97456020732ce875902b.bindPopup(popup_99bc5aa5ee19b05b40ee9e6ecf813ede)
+        ;
+
+        
+    
+    
+            var circle_marker_ca361f045c4f6daa3992599a1c00acbe = L.circleMarker(
+                [57.708534, 11.946484],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_be538393e192f260fe539b15d8919e1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5480a45719ebb4dbff8794a47deef376 = $(`<div id="html_5480a45719ebb4dbff8794a47deef376" style="width: 100.0%; height: 100.0%;"><b>Anders Carlssons gata</b><br>Departures: 4<br>Arrivals: 1<br>Departures: 4</div>`)[0];
+                popup_be538393e192f260fe539b15d8919e1f.setContent(html_5480a45719ebb4dbff8794a47deef376);
+            
+        
+
+        circle_marker_ca361f045c4f6daa3992599a1c00acbe.bindPopup(popup_be538393e192f260fe539b15d8919e1f)
+        ;
+
+        
+    
+    
+            var circle_marker_9563147ce71431b82b7ae3c9f8fe8f44 = L.circleMarker(
+                [57.715885, 11.910317],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_faddcc392899dcce5fe1511d62d4778a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e72fa2ad60835a7a51b657311891e97e = $(`<div id="html_e72fa2ad60835a7a51b657311891e97e" style="width: 100.0%; height: 100.0%;"><b>Eketrägatan (A)</b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_faddcc392899dcce5fe1511d62d4778a.setContent(html_e72fa2ad60835a7a51b657311891e97e);
+            
+        
+
+        circle_marker_9563147ce71431b82b7ae3c9f8fe8f44.bindPopup(popup_faddcc392899dcce5fe1511d62d4778a)
+        ;
+
+        
+    
+    
+            var circle_marker_2992fe9312dada433f50772ab0b8f015 = L.circleMarker(
+                [57.711745, 11.966214],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_36965280845d3008f8a454f99b87b45d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9aefb2106f67c5c6200d994599e8e47 = $(`<div id="html_c9aefb2106f67c5c6200d994599e8e47" style="width: 100.0%; height: 100.0%;"><b>Lilla bommen</b><br>Departures: 3<br>Arrivals: 0<br>Departures: 3</div>`)[0];
+                popup_36965280845d3008f8a454f99b87b45d.setContent(html_c9aefb2106f67c5c6200d994599e8e47);
+            
+        
+
+        circle_marker_2992fe9312dada433f50772ab0b8f015.bindPopup(popup_36965280845d3008f8a454f99b87b45d)
+        ;
+
+        
+    
+    
+            var circle_marker_e20629510a9b67604a099f305ceba9e2 = L.circleMarker(
+                [57.707479, 11.963891],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_fd5f6617b85321fd98982d93616e9df0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c23c04975ac9659082935642bc23840 = $(`<div id="html_1c23c04975ac9659082935642bc23840" style="width: 100.0%; height: 100.0%;"><b>Postgatan</b><br>Departures: 1<br>Arrivals: 0<br>Departures: 1</div>`)[0];
+                popup_fd5f6617b85321fd98982d93616e9df0.setContent(html_1c23c04975ac9659082935642bc23840);
+            
+        
+
+        circle_marker_e20629510a9b67604a099f305ceba9e2.bindPopup(popup_fd5f6617b85321fd98982d93616e9df0)
+        ;
+
+        
+    
+    
+            var circle_marker_6cccb4c08c1bc4001854127165dfcc4a = L.circleMarker(
+                [57.70149, 11.976648],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_0a36b20620c30c203e030dd0e0842f13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6595ea812d22590f834f018fcc619b8d = $(`<div id="html_6595ea812d22590f834f018fcc619b8d" style="width: 100.0%; height: 100.0%;"><b>Vasagatan/Heden</b><br>Departures: 4<br>Arrivals: 3<br>Departures: 4</div>`)[0];
+                popup_0a36b20620c30c203e030dd0e0842f13.setContent(html_6595ea812d22590f834f018fcc619b8d);
+            
+        
+
+        circle_marker_6cccb4c08c1bc4001854127165dfcc4a.bindPopup(popup_0a36b20620c30c203e030dd0e0842f13)
+        ;
+
+        
+    
+    
+            var circle_marker_c4cb3b08c36f968daa7da9ea975ccbaa = L.circleMarker(
+                [57.702499, 11.955555],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.363636363636363, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_95ca653a1624cae93af65c3c4143ea5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f262e9daad0d5ea81d06c7986f04f13e = $(`<div id="html_f262e9daad0d5ea81d06c7986f04f13e" style="width: 100.0%; height: 100.0%;"><b>Esperantoplatsen</b><br>Departures: 7<br>Arrivals: 3<br>Departures: 7</div>`)[0];
+                popup_95ca653a1624cae93af65c3c4143ea5e.setContent(html_f262e9daad0d5ea81d06c7986f04f13e);
+            
+        
+
+        circle_marker_c4cb3b08c36f968daa7da9ea975ccbaa.bindPopup(popup_95ca653a1624cae93af65c3c4143ea5e)
+        ;
+
+        
+    
+    
+            var circle_marker_105320667210bc8bc29c0b5259ad733d = L.circleMarker(
+                [57.704477, 11.984271],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_b1ade82ca86dcc84c016cffc05a58ead = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38919e0d589935d5af51b09211276418 = $(`<div id="html_38919e0d589935d5af51b09211276418" style="width: 100.0%; height: 100.0%;"><b>Bohusgatan</b><br>Departures: 2<br>Arrivals: 5<br>Departures: 2</div>`)[0];
+                popup_b1ade82ca86dcc84c016cffc05a58ead.setContent(html_38919e0d589935d5af51b09211276418);
+            
+        
+
+        circle_marker_105320667210bc8bc29c0b5259ad733d.bindPopup(popup_b1ade82ca86dcc84c016cffc05a58ead)
+        ;
+
+        
+    
+    
+            var circle_marker_ed6cfcb332c14424ac665204ab8ec9d5 = L.circleMarker(
+                [57.695921, 11.958664],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_2852b15168334616a4a06733a5438095 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_274ba24049bf5f3f2ec460762795db9e = $(`<div id="html_274ba24049bf5f3f2ec460762795db9e" style="width: 100.0%; height: 100.0%;"><b>Skanstorget</b><br>Departures: 2<br>Arrivals: 1<br>Departures: 2</div>`)[0];
+                popup_2852b15168334616a4a06733a5438095.setContent(html_274ba24049bf5f3f2ec460762795db9e);
+            
+        
+
+        circle_marker_ed6cfcb332c14424ac665204ab8ec9d5.bindPopup(popup_2852b15168334616a4a06733a5438095)
+        ;
+
+        
+    
+    
+            var circle_marker_eaacd6a9486103d86765122d310cbf0a = L.circleMarker(
+                [57.698429, 11.976702],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_300515769b1b167f996c09dccdda5e52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f2a63ba023ae0a495cb3f6ea77f06db = $(`<div id="html_0f2a63ba023ae0a495cb3f6ea77f06db" style="width: 100.0%; height: 100.0%;"><b>Engelbrektsgatan</b><br>Departures: 4<br>Arrivals: 4<br>Departures: 4</div>`)[0];
+                popup_300515769b1b167f996c09dccdda5e52.setContent(html_0f2a63ba023ae0a495cb3f6ea77f06db);
+            
+        
+
+        circle_marker_eaacd6a9486103d86765122d310cbf0a.bindPopup(popup_300515769b1b167f996c09dccdda5e52)
+        ;
+
+        
+    
+    
+            var circle_marker_2acec09d64306db83ef01d6d9e114afc = L.circleMarker(
+                [57.693601, 11.97193],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2727272727272725, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_21f0ea0d1ebc09255788a9b8a2e2a115 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62b5cbf3ce462a1f66766624bb0c8180 = $(`<div id="html_62b5cbf3ce462a1f66766624bb0c8180" style="width: 100.0%; height: 100.0%;"><b>Landala torg</b><br>Departures: 8<br>Arrivals: 2<br>Departures: 8</div>`)[0];
+                popup_21f0ea0d1ebc09255788a9b8a2e2a115.setContent(html_62b5cbf3ce462a1f66766624bb0c8180);
+            
+        
+
+        circle_marker_2acec09d64306db83ef01d6d9e114afc.bindPopup(popup_21f0ea0d1ebc09255788a9b8a2e2a115)
+        ;
+
+        
+    
+    
+            var circle_marker_0b19e2b0b74c238922fc2304986204e8 = L.circleMarker(
+                [57.692996, 11.986717],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_4a61eaf205afd2910dd4ce99dce0f6f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d73e4121725b4de8becd30478bda1715 = $(`<div id="html_d73e4121725b4de8becd30478bda1715" style="width: 100.0%; height: 100.0%;"><b>Carlandersplatsen</b><br>Departures: 3<br>Arrivals: 5<br>Departures: 3</div>`)[0];
+                popup_4a61eaf205afd2910dd4ce99dce0f6f5.setContent(html_d73e4121725b4de8becd30478bda1715);
+            
+        
+
+        circle_marker_0b19e2b0b74c238922fc2304986204e8.bindPopup(popup_4a61eaf205afd2910dd4ce99dce0f6f5)
+        ;
+
+        
+    
+    
+            var circle_marker_708371345e21f328bf9fa53d96e5f024 = L.circleMarker(
+                [57.698655, 11.956424],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_9a7b8ea3264093c18c2ffeaac116dc7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72c3dced209b1dbe963437c98374f0f4 = $(`<div id="html_72c3dced209b1dbe963437c98374f0f4" style="width: 100.0%; height: 100.0%;"><b>Kaponjärsgatan (A)</b><br>Departures: 1<br>Arrivals: 5<br>Departures: 1</div>`)[0];
+                popup_9a7b8ea3264093c18c2ffeaac116dc7c.setContent(html_72c3dced209b1dbe963437c98374f0f4);
+            
+        
+
+        circle_marker_708371345e21f328bf9fa53d96e5f024.bindPopup(popup_9a7b8ea3264093c18c2ffeaac116dc7c)
+        ;
+
+        
+    
+    
+            var circle_marker_6a3529eed8b4be40b68cb2144d25aeac = L.circleMarker(
+                [57.685286, 11.984083],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.454545454545454, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_e4ef65e02e24fa5cb6a09213f39a7dd3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_303d542ce400e533a5a014f91afd0b88 = $(`<div id="html_303d542ce400e533a5a014f91afd0b88" style="width: 100.0%; height: 100.0%;"><b>Gibraltargatan/Eklandagatan</b><br>Departures: 6<br>Arrivals: 12<br>Departures: 6</div>`)[0];
+                popup_e4ef65e02e24fa5cb6a09213f39a7dd3.setContent(html_303d542ce400e533a5a014f91afd0b88);
+            
+        
+
+        circle_marker_6a3529eed8b4be40b68cb2144d25aeac.bindPopup(popup_e4ef65e02e24fa5cb6a09213f39a7dd3)
+        ;
+
+        
+    
+    
+            var circle_marker_b9859a90efacd90a39b9b618e34bb2ef = L.circleMarker(
+                [57.690344, 11.988573],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.545454545454545, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_3dda053bbc614b3ae8dae7ef06e6dcdf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a87a1e4f9df741baa70c9d8ac0e463cc = $(`<div id="html_a87a1e4f9df741baa70c9d8ac0e463cc" style="width: 100.0%; height: 100.0%;"><b>Utlandagatan/Eklandagatan</b><br>Departures: 5<br>Arrivals: 7<br>Departures: 5</div>`)[0];
+                popup_3dda053bbc614b3ae8dae7ef06e6dcdf.setContent(html_a87a1e4f9df741baa70c9d8ac0e463cc);
+            
+        
+
+        circle_marker_b9859a90efacd90a39b9b618e34bb2ef.bindPopup(popup_3dda053bbc614b3ae8dae7ef06e6dcdf)
+        ;
+
+        
+    
+    
+            var circle_marker_146b0871c57ab370f0a5b09f00cbb9cb = L.circleMarker(
+                [57.708979, 11.984741],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_fcbdae455ba824d417294a1f9f660154 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcb601028c91b4fdd9d856678f02831d = $(`<div id="html_fcb601028c91b4fdd9d856678f02831d" style="width: 100.0%; height: 100.0%;"><b>Folkungagatan</b><br>Departures: 1<br>Arrivals: 5<br>Departures: 1</div>`)[0];
+                popup_fcbdae455ba824d417294a1f9f660154.setContent(html_fcb601028c91b4fdd9d856678f02831d);
+            
+        
+
+        circle_marker_146b0871c57ab370f0a5b09f00cbb9cb.bindPopup(popup_fcbdae455ba824d417294a1f9f660154)
+        ;
+
+        
+    
+    
+            var circle_marker_4fe6dc4779447f4648e8b3e04650a6f6 = L.circleMarker(
+                [57.698241, 11.946471],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.454545454545454, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_bfeb26ef05b96cb260a8ef670a77874a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8082f03c2b6dfd8f5a02dfaef5460d84 = $(`<div id="html_8082f03c2b6dfd8f5a02dfaef5460d84" style="width: 100.0%; height: 100.0%;"><b>Tredje långgatan/Värmlandsgatan</b><br>Departures: 6<br>Arrivals: 8<br>Departures: 6</div>`)[0];
+                popup_bfeb26ef05b96cb260a8ef670a77874a.setContent(html_8082f03c2b6dfd8f5a02dfaef5460d84);
+            
+        
+
+        circle_marker_4fe6dc4779447f4648e8b3e04650a6f6.bindPopup(popup_bfeb26ef05b96cb260a8ef670a77874a)
+        ;
+
+        
+    
+    
+            var circle_marker_b607ab1178ac5d722d1d460071b20a5e = L.circleMarker(
+                [57.710633, 11.943271],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_fb080d34222fd8c9f1dcfd14200e909d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4f8f149ebbbeec6da35a4072d59a2e6 = $(`<div id="html_a4f8f149ebbbeec6da35a4072d59a2e6" style="width: 100.0%; height: 100.0%;"><b>Lindholmsallén/Regnbågsgatan</b><br>Departures: 1<br>Arrivals: 0<br>Departures: 1</div>`)[0];
+                popup_fb080d34222fd8c9f1dcfd14200e909d.setContent(html_a4f8f149ebbbeec6da35a4072d59a2e6);
+            
+        
+
+        circle_marker_b607ab1178ac5d722d1d460071b20a5e.bindPopup(popup_fb080d34222fd8c9f1dcfd14200e909d)
+        ;
+
+        
+    
+    
+            var circle_marker_a9ba7eba12be5e38096700dc52b0c1db = L.circleMarker(
+                [57.693985, 11.919292],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_799edbe45e01edf084a54da0e53bd52b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e726901722eb57e6f3cef2d838fa27b = $(`<div id="html_3e726901722eb57e6f3cef2d838fa27b" style="width: 100.0%; height: 100.0%;"><b>Chapmans torg</b><br>Departures: 1<br>Arrivals: 3<br>Departures: 1</div>`)[0];
+                popup_799edbe45e01edf084a54da0e53bd52b.setContent(html_3e726901722eb57e6f3cef2d838fa27b);
+            
+        
+
+        circle_marker_a9ba7eba12be5e38096700dc52b0c1db.bindPopup(popup_799edbe45e01edf084a54da0e53bd52b)
+        ;
+
+        
+    
+    
+            var circle_marker_ef786702acfde5d2f4f5f52266893fa8 = L.circleMarker(
+                [57.716479, 11.96145],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_96b4decd6584fe446dd25e1a8d73d00d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02cb6a474a631af33ae83706acec8c95 = $(`<div id="html_02cb6a474a631af33ae83706acec8c95" style="width: 100.0%; height: 100.0%;"><b>Frihamnen</b><br>Departures: 4<br>Arrivals: 0<br>Departures: 4</div>`)[0];
+                popup_96b4decd6584fe446dd25e1a8d73d00d.setContent(html_02cb6a474a631af33ae83706acec8c95);
+            
+        
+
+        circle_marker_ef786702acfde5d2f4f5f52266893fa8.bindPopup(popup_96b4decd6584fe446dd25e1a8d73d00d)
+        ;
+
+        
+    
+    
+            var circle_marker_2b9bbd155ff28c91ae277955c6f3568b = L.circleMarker(
+                [57.717953, 11.955591],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_110b6e8d3be96f9ccb45ddc032468c5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_995fd661df9c589c4e6f38fb659148ec = $(`<div id="html_995fd661df9c589c4e6f38fb659148ec" style="width: 100.0%; height: 100.0%;"><b>Kvillepiren</b><br>Departures: 2<br>Arrivals: 8<br>Departures: 2</div>`)[0];
+                popup_110b6e8d3be96f9ccb45ddc032468c5d.setContent(html_995fd661df9c589c4e6f38fb659148ec);
+            
+        
+
+        circle_marker_2b9bbd155ff28c91ae277955c6f3568b.bindPopup(popup_110b6e8d3be96f9ccb45ddc032468c5d)
+        ;
+
+        
+    
+    
+            var circle_marker_7d3e71b00ac3fb7b5b0ab81efd127546 = L.circleMarker(
+                [57.716023, 11.945039],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_8d520ca6b8d7ba948dcfa0fef4fbc101 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f795ab33b65fde4dcb46c2f3522177b = $(`<div id="html_6f795ab33b65fde4dcb46c2f3522177b" style="width: 100.0%; height: 100.0%;"><b>Jägaregatan</b><br>Departures: 1<br>Arrivals: 4<br>Departures: 1</div>`)[0];
+                popup_8d520ca6b8d7ba948dcfa0fef4fbc101.setContent(html_6f795ab33b65fde4dcb46c2f3522177b);
+            
+        
+
+        circle_marker_7d3e71b00ac3fb7b5b0ab81efd127546.bindPopup(popup_8d520ca6b8d7ba948dcfa0fef4fbc101)
+        ;
+
+        
+    
+    
+            var circle_marker_73cf8e9837775633c5d981dd547a28d6 = L.circleMarker(
+                [57.686949, 11.92082],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_86708e7a74fb5b1dd8571431d7b57309 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48609ed7105b4e45a79ddcafe09477f5 = $(`<div id="html_48609ed7105b4e45a79ddcafe09477f5" style="width: 100.0%; height: 100.0%;"><b>Mariaplan (A)</b><br>Departures: 2<br>Arrivals: 4<br>Departures: 2</div>`)[0];
+                popup_86708e7a74fb5b1dd8571431d7b57309.setContent(html_48609ed7105b4e45a79ddcafe09477f5);
+            
+        
+
+        circle_marker_73cf8e9837775633c5d981dd547a28d6.bindPopup(popup_86708e7a74fb5b1dd8571431d7b57309)
+        ;
+
+        
+    
+    
+            var circle_marker_713acf018ca7f55184ce1770f1869aed = L.circleMarker(
+                [57.695263, 11.985067],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_550c0df87f447722fb34f720dbb3cc04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c381c770024cd7c8ea8fa677bfef02ec = $(`<div id="html_c381c770024cd7c8ea8fa677bfef02ec" style="width: 100.0%; height: 100.0%;"><b>Renströmsgatan</b><br>Departures: 1<br>Arrivals: 0<br>Departures: 1</div>`)[0];
+                popup_550c0df87f447722fb34f720dbb3cc04.setContent(html_c381c770024cd7c8ea8fa677bfef02ec);
+            
+        
+
+        circle_marker_713acf018ca7f55184ce1770f1869aed.bindPopup(popup_550c0df87f447722fb34f720dbb3cc04)
+        ;
+
+        
+    
+    
+            var circle_marker_6b9bb187c5da644d97682f6ad34b9eca = L.circleMarker(
+                [57.728825, 12.01216],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_b7fb6db9eb5af799677c7f51e0f2c6a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1dba248f331b5cbf0dc332679ef98b78 = $(`<div id="html_1dba248f331b5cbf0dc332679ef98b78" style="width: 100.0%; height: 100.0%;"><b>Hornsgatan</b><br>Departures: 2<br>Arrivals: 4<br>Departures: 2</div>`)[0];
+                popup_b7fb6db9eb5af799677c7f51e0f2c6a3.setContent(html_1dba248f331b5cbf0dc332679ef98b78);
+            
+        
+
+        circle_marker_6b9bb187c5da644d97682f6ad34b9eca.bindPopup(popup_b7fb6db9eb5af799677c7f51e0f2c6a3)
+        ;
+
+        
+    
+    
+            var circle_marker_318e4c7f6f5e5cd82b6b28a9b5095413 = L.circleMarker(
+                [57.689861, 11.979974],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_1cb1ac47289b0587b0169c6573286254 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0413e11628d29ed24f803fc2d4c15596 = $(`<div id="html_0413e11628d29ed24f803fc2d4c15596" style="width: 100.0%; height: 100.0%;"><b>Chalmers tvärgata (A)</b><br>Departures: 11<br>Arrivals: 19<br>Departures: 11</div>`)[0];
+                popup_1cb1ac47289b0587b0169c6573286254.setContent(html_0413e11628d29ed24f803fc2d4c15596);
+            
+        
+
+        circle_marker_318e4c7f6f5e5cd82b6b28a9b5095413.bindPopup(popup_1cb1ac47289b0587b0169c6573286254)
+        ;
+
+        
+    
+    
+            var circle_marker_b6161e27dcd86fe0c85b3300105e3d4b = L.circleMarker(
+                [57.708489, 11.975666],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2727272727272725, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_05623e97ae008af438263a54c7c59d1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b5756599a623b81c9b8410f595d3821 = $(`<div id="html_9b5756599a623b81c9b8410f595d3821" style="width: 100.0%; height: 100.0%;"><b>Åkareplatsen</b><br>Departures: 8<br>Arrivals: 1<br>Departures: 8</div>`)[0];
+                popup_05623e97ae008af438263a54c7c59d1d.setContent(html_9b5756599a623b81c9b8410f595d3821);
+            
+        
+
+        circle_marker_b6161e27dcd86fe0c85b3300105e3d4b.bindPopup(popup_05623e97ae008af438263a54c7c59d1d)
+        ;
+
+        
+    
+    
+            var circle_marker_0706151be510f4ef2e077231b7beae5e = L.circleMarker(
+                [57.699934, 11.976213],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_3ab747d112f206257554fc9f9ade7353 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5076efc28b430ccf79858318d14ddb2 = $(`<div id="html_b5076efc28b430ccf79858318d14ddb2" style="width: 100.0%; height: 100.0%;"><b>Kristinelundsgatan</b><br>Departures: 3<br>Arrivals: 1<br>Departures: 3</div>`)[0];
+                popup_3ab747d112f206257554fc9f9ade7353.setContent(html_b5076efc28b430ccf79858318d14ddb2);
+            
+        
+
+        circle_marker_0706151be510f4ef2e077231b7beae5e.bindPopup(popup_3ab747d112f206257554fc9f9ade7353)
+        ;
+
+        
+    
+    
+            var circle_marker_4d0fb6c19365be1ad23788312f93d943 = L.circleMarker(
+                [57.702505, 11.979137],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_1b237572840b84536f58715ef4de5581 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ccf047cc8aff989afa693aa7c9c4743 = $(`<div id="html_6ccf047cc8aff989afa693aa7c9c4743" style="width: 100.0%; height: 100.0%;"><b>Heden/Stensturegatan</b><br>Departures: 2<br>Arrivals: 2<br>Departures: 2</div>`)[0];
+                popup_1b237572840b84536f58715ef4de5581.setContent(html_6ccf047cc8aff989afa693aa7c9c4743);
+            
+        
+
+        circle_marker_4d0fb6c19365be1ad23788312f93d943.bindPopup(popup_1b237572840b84536f58715ef4de5581)
+        ;
+
+        
+    
+    
+            var circle_marker_1a2ab416663c0af34ff7d73b739dda7f = L.circleMarker(
+                [57.691792, 11.992596],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_d7c3afd12f31f701a8c23fe3052685d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_747737092445463a3dfc031339a2ab80 = $(`<div id="html_747737092445463a3dfc031339a2ab80" style="width: 100.0%; height: 100.0%;"><b>Liseberg södra</b><br>Departures: 1<br>Arrivals: 3<br>Departures: 1</div>`)[0];
+                popup_d7c3afd12f31f701a8c23fe3052685d2.setContent(html_747737092445463a3dfc031339a2ab80);
+            
+        
+
+        circle_marker_1a2ab416663c0af34ff7d73b739dda7f.bindPopup(popup_d7c3afd12f31f701a8c23fe3052685d2)
+        ;
+
+        
+    
+    
+            var circle_marker_8a732a81be04971af1c2148ec0180b7f = L.circleMarker(
+                [57.706957, 11.989121],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_fc608c9d145ce9de2351ed0eeeedb2e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22de5bc210442d493822c0a210fe8a60 = $(`<div id="html_22de5bc210442d493822c0a210fe8a60" style="width: 100.0%; height: 100.0%;"><b>Dämmeplatsen</b><br>Departures: 2<br>Arrivals: 1<br>Departures: 2</div>`)[0];
+                popup_fc608c9d145ce9de2351ed0eeeedb2e4.setContent(html_22de5bc210442d493822c0a210fe8a60);
+            
+        
+
+        circle_marker_8a732a81be04971af1c2148ec0180b7f.bindPopup(popup_fc608c9d145ce9de2351ed0eeeedb2e4)
+        ;
+
+        
+    
+    
+            var circle_marker_6d07cafc978a6218b511d5f753c9abf5 = L.circleMarker(
+                [57.700117, 11.987962],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_67662f44585bf88976eeccd1fd49f145 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90a30f535fee6f1816d6effd2f1047b9 = $(`<div id="html_90a30f535fee6f1816d6effd2f1047b9" style="width: 100.0%; height: 100.0%;"><b>Scandinavium</b><br>Departures: 2<br>Arrivals: 0<br>Departures: 2</div>`)[0];
+                popup_67662f44585bf88976eeccd1fd49f145.setContent(html_90a30f535fee6f1816d6effd2f1047b9);
+            
+        
+
+        circle_marker_6d07cafc978a6218b511d5f753c9abf5.bindPopup(popup_67662f44585bf88976eeccd1fd49f145)
+        ;
+
+        
+    
+    
+            var circle_marker_e87465b52e353f303594979fab7a2845 = L.circleMarker(
+                [57.702117, 11.98506],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_cc4a0e4e42b15a9939a9ae82c1befba6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36bd486d92c5e0bfcf8bf362c314461a = $(`<div id="html_36bd486d92c5e0bfcf8bf362c314461a" style="width: 100.0%; height: 100.0%;"><b>Bergakungen</b><br>Departures: 1<br>Arrivals: 2<br>Departures: 1</div>`)[0];
+                popup_cc4a0e4e42b15a9939a9ae82c1befba6.setContent(html_36bd486d92c5e0bfcf8bf362c314461a);
+            
+        
+
+        circle_marker_e87465b52e353f303594979fab7a2845.bindPopup(popup_cc4a0e4e42b15a9939a9ae82c1befba6)
+        ;
+
+        
+    
+    
+            var circle_marker_a3dfe62b972d4904c23f2ae8d8b4876d = L.circleMarker(
+                [57.692827, 11.955807],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_6a85b727ccdef89ddc94893c27abb0d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18efe3e654b488a61c23619748456807 = $(`<div id="html_18efe3e654b488a61c23619748456807" style="width: 100.0%; height: 100.0%;"><b>Kastellgatan</b><br>Departures: 2<br>Arrivals: 7<br>Departures: 2</div>`)[0];
+                popup_6a85b727ccdef89ddc94893c27abb0d6.setContent(html_18efe3e654b488a61c23619748456807);
+            
+        
+
+        circle_marker_a3dfe62b972d4904c23f2ae8d8b4876d.bindPopup(popup_6a85b727ccdef89ddc94893c27abb0d6)
+        ;
+
+        
+    
+    
+            var circle_marker_3b0d29815b19deb1628aac621cdd8fac = L.circleMarker(
+                [57.698342, 11.967771],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2727272727272725, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_a0a45316caac393b36eab2dc93dcef74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6fe6d47b4adeb875317ff9b82359c45 = $(`<div id="html_f6fe6d47b4adeb875317ff9b82359c45" style="width: 100.0%; height: 100.0%;"><b>Vasagatan/Schillerska</b><br>Departures: 8<br>Arrivals: 5<br>Departures: 8</div>`)[0];
+                popup_a0a45316caac393b36eab2dc93dcef74.setContent(html_f6fe6d47b4adeb875317ff9b82359c45);
+            
+        
+
+        circle_marker_3b0d29815b19deb1628aac621cdd8fac.bindPopup(popup_a0a45316caac393b36eab2dc93dcef74)
+        ;
+
+        
+    
+    
+            var circle_marker_4a9e6f352107b0d4c506aa94a4ea58da = L.circleMarker(
+                [57.703273, 11.959986],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_c9125247d2973014bd36ce8ca6c359ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e026579dc75b7c1ccd1d2a51e8c84dcf = $(`<div id="html_e026579dc75b7c1ccd1d2a51e8c84dcf" style="width: 100.0%; height: 100.0%;"><b>Kungsgatan/Telekasern</b><br>Departures: 2<br>Arrivals: 2<br>Departures: 2</div>`)[0];
+                popup_c9125247d2973014bd36ce8ca6c359ea.setContent(html_e026579dc75b7c1ccd1d2a51e8c84dcf);
+            
+        
+
+        circle_marker_4a9e6f352107b0d4c506aa94a4ea58da.bindPopup(popup_c9125247d2973014bd36ce8ca6c359ea)
+        ;
+
+        
+    
+    
+            var circle_marker_ece9102c1ef15ecae95cf2b30229d984 = L.circleMarker(
+                [57.715599, 11.972684],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_e4d345f62c70560dd541d5edb22b2fc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0ddd6395040e41a9342f8903d64e87f = $(`<div id="html_d0ddd6395040e41a9342f8903d64e87f" style="width: 100.0%; height: 100.0%;"><b>Gullbergsvass</b><br>Departures: 2<br>Arrivals: 1<br>Departures: 2</div>`)[0];
+                popup_e4d345f62c70560dd541d5edb22b2fc3.setContent(html_d0ddd6395040e41a9342f8903d64e87f);
+            
+        
+
+        circle_marker_ece9102c1ef15ecae95cf2b30229d984.bindPopup(popup_e4d345f62c70560dd541d5edb22b2fc3)
+        ;
+
+        
+    
+    
+            var circle_marker_cf5e690d16b72ea4896130c9af090e05 = L.circleMarker(
+                [57.70247, 11.974427],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_fafcb50712dfdc988f54e4df9fd1849d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b302f2c4e25012e6d58202580d441e20 = $(`<div id="html_b302f2c4e25012e6d58202580d441e20" style="width: 100.0%; height: 100.0%;"><b>Heden bussterminal (A)</b><br>Departures: 3<br>Arrivals: 1<br>Departures: 3</div>`)[0];
+                popup_fafcb50712dfdc988f54e4df9fd1849d.setContent(html_b302f2c4e25012e6d58202580d441e20);
+            
+        
+
+        circle_marker_cf5e690d16b72ea4896130c9af090e05.bindPopup(popup_fafcb50712dfdc988f54e4df9fd1849d)
+        ;
+
+        
+    
+    
+            var circle_marker_549606e21ffca830ab8e2784a37427dd = L.circleMarker(
+                [57.711346, 11.995617],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_989032098acddf603ba9663aac979a9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13a2b5c37cfff4739c538c71336010cd = $(`<div id="html_13a2b5c37cfff4739c538c71336010cd" style="width: 100.0%; height: 100.0%;"><b>Gårda Vesta</b><br>Departures: 1<br>Arrivals: 5<br>Departures: 1</div>`)[0];
+                popup_989032098acddf603ba9663aac979a9d.setContent(html_13a2b5c37cfff4739c538c71336010cd);
+            
+        
+
+        circle_marker_549606e21ffca830ab8e2784a37427dd.bindPopup(popup_989032098acddf603ba9663aac979a9d)
+        ;
+
+        
+    
+    
+            var circle_marker_c4c6d80668d779f125b270e1292f731c = L.circleMarker(
+                [57.681802, 11.983083],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.454545454545454, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_0f7502f5d370e6982a7a7645402f0a33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bba0aeb7b413d0ca59729898179fc05 = $(`<div id="html_3bba0aeb7b413d0ca59729898179fc05" style="width: 100.0%; height: 100.0%;"><b>Mossen</b><br>Departures: 6<br>Arrivals: 9<br>Departures: 6</div>`)[0];
+                popup_0f7502f5d370e6982a7a7645402f0a33.setContent(html_3bba0aeb7b413d0ca59729898179fc05);
+            
+        
+
+        circle_marker_c4c6d80668d779f125b270e1292f731c.bindPopup(popup_0f7502f5d370e6982a7a7645402f0a33)
+        ;
+
+        
+    
+    
+            var circle_marker_ba87bb84f4ad653a56819555402fde34 = L.circleMarker(
+                [57.684374, 11.972228],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_e4206b2361480e309d27b30f04c759f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b482c650d625755c55e1b69c163c6a3e = $(`<div id="html_b482c650d625755c55e1b69c163c6a3e" style="width: 100.0%; height: 100.0%;"><b>Doktor Fries Torg</b><br>Departures: 1<br>Arrivals: 0<br>Departures: 1</div>`)[0];
+                popup_e4206b2361480e309d27b30f04c759f0.setContent(html_b482c650d625755c55e1b69c163c6a3e);
+            
+        
+
+        circle_marker_ba87bb84f4ad653a56819555402fde34.bindPopup(popup_e4206b2361480e309d27b30f04c759f0)
+        ;
+
+        
+    
+    
+            var circle_marker_c9fd6a3c5e69a72a6704c870a7bf9545 = L.circleMarker(
+                [57.722008, 11.96969],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_71b03e96347ed8c2dfb3df7521f37fd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54c450a57dee2023b2329b9dcbbbfe00 = $(`<div id="html_54c450a57dee2023b2329b9dcbbbfe00" style="width: 100.0%; height: 100.0%;"><b>Ringögatan</b><br>Departures: 1<br>Arrivals: 2<br>Departures: 1</div>`)[0];
+                popup_71b03e96347ed8c2dfb3df7521f37fd9.setContent(html_54c450a57dee2023b2329b9dcbbbfe00);
+            
+        
+
+        circle_marker_c9fd6a3c5e69a72a6704c870a7bf9545.bindPopup(popup_71b03e96347ed8c2dfb3df7521f37fd9)
+        ;
+
+        
+    
+    
+            var circle_marker_c3e17d896033d1dc3db5686fc3b61af2 = L.circleMarker(
+                [57.714507, 11.92759],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_76487cf4e7c0c2e4f1c361f51ef18044 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_732582e8fdf98cca9e5f491d876576c7 = $(`<div id="html_732582e8fdf98cca9e5f491d876576c7" style="width: 100.0%; height: 100.0%;"><b>Inlandsgatan</b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_76487cf4e7c0c2e4f1c361f51ef18044.setContent(html_732582e8fdf98cca9e5f491d876576c7);
+            
+        
+
+        circle_marker_c3e17d896033d1dc3db5686fc3b61af2.bindPopup(popup_76487cf4e7c0c2e4f1c361f51ef18044)
+        ;
+
+        
+    
+    
+            var circle_marker_14f4cac6bb631457a76bfd5b81c0bd1e = L.circleMarker(
+                [57.692583, 11.973987],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_bd4cf184f759bfe564cff2a94fa5542c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a06c49a6c7e899ef660b349bcb0f2283 = $(`<div id="html_a06c49a6c7e899ef660b349bcb0f2283" style="width: 100.0%; height: 100.0%;"><b>Kapellplatsen</b><br>Departures: 4<br>Arrivals: 2<br>Departures: 4</div>`)[0];
+                popup_bd4cf184f759bfe564cff2a94fa5542c.setContent(html_a06c49a6c7e899ef660b349bcb0f2283);
+            
+        
+
+        circle_marker_14f4cac6bb631457a76bfd5b81c0bd1e.bindPopup(popup_bd4cf184f759bfe564cff2a94fa5542c)
+        ;
+
+        
+    
+    
+            var circle_marker_6597900bca30ccead31ae9bf1d206fe7 = L.circleMarker(
+                [57.69669, 11.972278],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_4968eb5a9d4fbffd8053b9f43f1153b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96fa3762bcc1cd53efc2769fbd0489a3 = $(`<div id="html_96fa3762bcc1cd53efc2769fbd0489a3" style="width: 100.0%; height: 100.0%;"><b>Molinsgatan</b><br>Departures: 1<br>Arrivals: 3<br>Departures: 1</div>`)[0];
+                popup_4968eb5a9d4fbffd8053b9f43f1153b4.setContent(html_96fa3762bcc1cd53efc2769fbd0489a3);
+            
+        
+
+        circle_marker_6597900bca30ccead31ae9bf1d206fe7.bindPopup(popup_4968eb5a9d4fbffd8053b9f43f1153b4)
+        ;
+
+        
+    
+    
+            var circle_marker_aa6d964dddba39d610a2cb497bc35b5b = L.circleMarker(
+                [57.698718, 11.934371],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2727272727272725, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_cf9e9de7157fc099e28b71b013966767 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_efbc4626bed445d336119a884baf55da = $(`<div id="html_efbc4626bed445d336119a884baf55da" style="width: 100.0%; height: 100.0%;"><b>Stigbergstorget</b><br>Departures: 8<br>Arrivals: 5<br>Departures: 8</div>`)[0];
+                popup_cf9e9de7157fc099e28b71b013966767.setContent(html_efbc4626bed445d336119a884baf55da);
+            
+        
+
+        circle_marker_aa6d964dddba39d610a2cb497bc35b5b.bindPopup(popup_cf9e9de7157fc099e28b71b013966767)
+        ;
+
+        
+    
+    
+            var circle_marker_a2ac96ee777043627b13ae67240f2f93 = L.circleMarker(
+                [57.675107, 12.007756],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_62314eb79174474add4b5615d01d4055 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a6d010e35ee13032256a85fe98eb8ab = $(`<div id="html_6a6d010e35ee13032256a85fe98eb8ab" style="width: 100.0%; height: 100.0%;"><b>Krokslätts torg (A)</b><br>Departures: 1<br>Arrivals: 3<br>Departures: 1</div>`)[0];
+                popup_62314eb79174474add4b5615d01d4055.setContent(html_6a6d010e35ee13032256a85fe98eb8ab);
+            
+        
+
+        circle_marker_a2ac96ee777043627b13ae67240f2f93.bindPopup(popup_62314eb79174474add4b5615d01d4055)
+        ;
+
+        
+    
+    
+            var circle_marker_1834634862967d06e4166d69ed13d942 = L.circleMarker(
+                [57.655461, 12.011447],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_8d6ecbc5a16788e31eec5de655928252 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bea2d0b428a879ad2f6bcc95ddf02b2e = $(`<div id="html_bea2d0b428a879ad2f6bcc95ddf02b2e" style="width: 100.0%; height: 100.0%;"><b>Mölndals stadsbibliotek</b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_8d6ecbc5a16788e31eec5de655928252.setContent(html_bea2d0b428a879ad2f6bcc95ddf02b2e);
+            
+        
+
+        circle_marker_1834634862967d06e4166d69ed13d942.bindPopup(popup_8d6ecbc5a16788e31eec5de655928252)
+        ;
+
+        
+    
+    
+            var circle_marker_b258cc71396f71db94fbfad4bd4f3d3f = L.circleMarker(
+                [57.692474, 11.911932],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_b658dc9446aadde8d62a482bffb3efdb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13f5f1b36390b70cbe2bce384288dc31 = $(`<div id="html_13f5f1b36390b70cbe2bce384288dc31" style="width: 100.0%; height: 100.0%;"><b>Klippans färjeläge</b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_b658dc9446aadde8d62a482bffb3efdb.setContent(html_13f5f1b36390b70cbe2bce384288dc31);
+            
+        
+
+        circle_marker_b258cc71396f71db94fbfad4bd4f3d3f.bindPopup(popup_b658dc9446aadde8d62a482bffb3efdb)
+        ;
+
+        
+    
+    
+            var circle_marker_a40b5888904f6d13d1c7fd203829bafc = L.circleMarker(
+                [57.708839, 11.927097],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_c58b8287d3e1fb14f3c60ff0a64c1459 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29e11b6353c103b3a66dbd704070629d = $(`<div id="html_29e11b6353c103b3a66dbd704070629d" style="width: 100.0%; height: 100.0%;"><b>Ceresplatsen</b><br>Departures: 3<br>Arrivals: 0<br>Departures: 3</div>`)[0];
+                popup_c58b8287d3e1fb14f3c60ff0a64c1459.setContent(html_29e11b6353c103b3a66dbd704070629d);
+            
+        
+
+        circle_marker_a40b5888904f6d13d1c7fd203829bafc.bindPopup(popup_c58b8287d3e1fb14f3c60ff0a64c1459)
+        ;
+
+        
+    
+    
+            var circle_marker_4ee2e2271577da7f7aec4a27a8df99f9 = L.circleMarker(
+                [57.712796, 11.979019],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_2414090c8d7446b4dcbdc96583f80b99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_779bb79a749c68848e070c050be5e008 = $(`<div id="html_779bb79a749c68848e070c050be5e008" style="width: 100.0%; height: 100.0%;"><b>Centralen långtidsparkering</b><br>Departures: 1<br>Arrivals: 0<br>Departures: 1</div>`)[0];
+                popup_2414090c8d7446b4dcbdc96583f80b99.setContent(html_779bb79a749c68848e070c050be5e008);
+            
+        
+
+        circle_marker_4ee2e2271577da7f7aec4a27a8df99f9.bindPopup(popup_2414090c8d7446b4dcbdc96583f80b99)
+        ;
+
+        
+    
+    
+            var circle_marker_7f78ad160cbc91361fe27dc9de55020f = L.circleMarker(
+                [57.694131, 11.926341],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_5274553bed72d504bf4e42e78d44f51d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69d51e7784b42be48e7057bf945ab598 = $(`<div id="html_69d51e7784b42be48e7057bf945ab598" style="width: 100.0%; height: 100.0%;"><b>Såggatan</b><br>Departures: 2<br>Arrivals: 2<br>Departures: 2</div>`)[0];
+                popup_5274553bed72d504bf4e42e78d44f51d.setContent(html_69d51e7784b42be48e7057bf945ab598);
+            
+        
+
+        circle_marker_7f78ad160cbc91361fe27dc9de55020f.bindPopup(popup_5274553bed72d504bf4e42e78d44f51d)
+        ;
+
+        
+    
+    
+            var circle_marker_6c9d0ebd3b4aa9a3c78bf7f737e8d52a = L.circleMarker(
+                [57.719251, 11.927182],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_980b49698032dfbb75eea7f7dac2e534 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ed308c44755fbe53fc54a3bfa0ff153 = $(`<div id="html_6ed308c44755fbe53fc54a3bfa0ff153" style="width: 100.0%; height: 100.0%;"><b>Lundbybadet</b><br>Departures: 3<br>Arrivals: 2<br>Departures: 3</div>`)[0];
+                popup_980b49698032dfbb75eea7f7dac2e534.setContent(html_6ed308c44755fbe53fc54a3bfa0ff153);
+            
+        
+
+        circle_marker_6c9d0ebd3b4aa9a3c78bf7f737e8d52a.bindPopup(popup_980b49698032dfbb75eea7f7dac2e534)
+        ;
+
+        
+    
+    
+            var circle_marker_8c46b00789327ac3ccf7f9e60034bed9 = L.circleMarker(
+                [57.712734, 11.926128],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_a5fcdd1b918165a55c7410d3dc09b63a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_123b773131623db9f09ac5159e4eddf4 = $(`<div id="html_123b773131623db9f09ac5159e4eddf4" style="width: 100.0%; height: 100.0%;"><b>Volvo Lundby Södra </b><br>Departures: 1<br>Arrivals: 1<br>Departures: 1</div>`)[0];
+                popup_a5fcdd1b918165a55c7410d3dc09b63a.setContent(html_123b773131623db9f09ac5159e4eddf4);
+            
+        
+
+        circle_marker_8c46b00789327ac3ccf7f9e60034bed9.bindPopup(popup_a5fcdd1b918165a55c7410d3dc09b63a)
+        ;
+
+        
+    
+    
+            var circle_marker_567a448872053a8cc0b040e0713bd813 = L.circleMarker(
+                [57.700467, 11.953216],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_e272b230a6b745b0053be0d61277c4ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba36e1ddd3632091bf2172e60ceaa72f = $(`<div id="html_ba36e1ddd3632091bf2172e60ceaa72f" style="width: 100.0%; height: 100.0%;"><b>Olof Palmes Plats (A)</b><br>Departures: 4<br>Arrivals: 5<br>Departures: 4</div>`)[0];
+                popup_e272b230a6b745b0053be0d61277c4ff.setContent(html_ba36e1ddd3632091bf2172e60ceaa72f);
+            
+        
+
+        circle_marker_567a448872053a8cc0b040e0713bd813.bindPopup(popup_e272b230a6b745b0053be0d61277c4ff)
+        ;
+
+        
+    
+    
+            var circle_marker_25ca065e1bd8d07d16a35ae7548bbdf2 = L.circleMarker(
+                [57.685435, 11.977801],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_36924e131e57d2e354095e1dd8c2ffc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb4546932ad0b1b9239e80d20cb4941e = $(`<div id="html_cb4546932ad0b1b9239e80d20cb4941e" style="width: 100.0%; height: 100.0%;"><b>Sven Hultins plats</b><br>Departures: 2<br>Arrivals: 6<br>Departures: 2</div>`)[0];
+                popup_36924e131e57d2e354095e1dd8c2ffc2.setContent(html_cb4546932ad0b1b9239e80d20cb4941e);
+            
+        
+
+        circle_marker_25ca065e1bd8d07d16a35ae7548bbdf2.bindPopup(popup_36924e131e57d2e354095e1dd8c2ffc2)
+        ;
+
+        
+    
+    
+            var circle_marker_3ad75eabab66737bb10a29e963595841 = L.circleMarker(
+                [57.68319, 12.008756],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_f37c2ed746acec6586926016a19bebb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_510e90d466b2cb8ba5ff5871f4fe4a44 = $(`<div id="html_510e90d466b2cb8ba5ff5871f4fe4a44" style="width: 100.0%; height: 100.0%;"><b>Ostgatan</b><br>Departures: 1<br>Arrivals: 5<br>Departures: 1</div>`)[0];
+                popup_f37c2ed746acec6586926016a19bebb6.setContent(html_510e90d466b2cb8ba5ff5871f4fe4a44);
+            
+        
+
+        circle_marker_3ad75eabab66737bb10a29e963595841.bindPopup(popup_f37c2ed746acec6586926016a19bebb6)
+        ;
+
+        
+    
+    
+            var circle_marker_557c7608d39d44b9dc022786e0d0a7a3 = L.circleMarker(
+                [57.671152, 12.009609],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_8b352bacda3feda4c9dac46b75eb6b4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f12eff862f892b4f60ee1d6d23508a4 = $(`<div id="html_2f12eff862f892b4f60ee1d6d23508a4" style="width: 100.0%; height: 100.0%;"><b>Krokslätts fabriker (A)</b><br>Departures: 0<br>Arrivals: 2<br>Departures: 0</div>`)[0];
+                popup_8b352bacda3feda4c9dac46b75eb6b4d.setContent(html_2f12eff862f892b4f60ee1d6d23508a4);
+            
+        
+
+        circle_marker_557c7608d39d44b9dc022786e0d0a7a3.bindPopup(popup_8b352bacda3feda4c9dac46b75eb6b4d)
+        ;
+
+        
+    
+    
+            var circle_marker_6ddf829c478cacdab99a74f38a69e15f = L.circleMarker(
+                [57.697933, 11.995064],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_5718b84485650f25dbc59fa11b5d2e5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63250a25b41f04b76d4ae708f16ee94e = $(`<div id="html_63250a25b41f04b76d4ae708f16ee94e" style="width: 100.0%; height: 100.0%;"><b>Liseberg station (A)</b><br>Departures: 0<br>Arrivals: 3<br>Departures: 0</div>`)[0];
+                popup_5718b84485650f25dbc59fa11b5d2e5b.setContent(html_63250a25b41f04b76d4ae708f16ee94e);
+            
+        
+
+        circle_marker_6ddf829c478cacdab99a74f38a69e15f.bindPopup(popup_5718b84485650f25dbc59fa11b5d2e5b)
+        ;
+
+        
+    
+    
+            var circle_marker_3a4bebfdb4361c023495497662ae3014 = L.circleMarker(
+                [57.704689, 11.990669],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_bf7fe798b7b3c7e7550912729ecd0eab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34666483d7e475e5b4e53b83c5cea17c = $(`<div id="html_34666483d7e475e5b4e53b83c5cea17c" style="width: 100.0%; height: 100.0%;"><b>Åvägen norra</b><br>Departures: 0<br>Arrivals: 4<br>Departures: 0</div>`)[0];
+                popup_bf7fe798b7b3c7e7550912729ecd0eab.setContent(html_34666483d7e475e5b4e53b83c5cea17c);
+            
+        
+
+        circle_marker_3a4bebfdb4361c023495497662ae3014.bindPopup(popup_bf7fe798b7b3c7e7550912729ecd0eab)
+        ;
+
+        
+    
+    
+            var circle_marker_45fc761ef4fbfb8f2ec98c153d39ce5a = L.circleMarker(
+                [57.661494, 11.998535],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_58bc0b857bfd555bd2c1f89e4f5d946f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_945f68b61b959bec24405cc8f4eb0a4d = $(`<div id="html_945f68b61b959bec24405cc8f4eb0a4d" style="width: 100.0%; height: 100.0%;"><b>Bifrost</b><br>Departures: 0<br>Arrivals: 2<br>Departures: 0</div>`)[0];
+                popup_58bc0b857bfd555bd2c1f89e4f5d946f.setContent(html_945f68b61b959bec24405cc8f4eb0a4d);
+            
+        
+
+        circle_marker_45fc761ef4fbfb8f2ec98c153d39ce5a.bindPopup(popup_58bc0b857bfd555bd2c1f89e4f5d946f)
+        ;
+
+        
+    
+    
+            var circle_marker_5367c7fb6f2a3ca90091093ed2257720 = L.circleMarker(
+                [57.649064, 12.013684],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_e7e93eeea269a4e8055927ea8fa5c957 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2a56148a9edc6fc7f04f3dd9346946c = $(`<div id="html_b2a56148a9edc6fc7f04f3dd9346946c" style="width: 100.0%; height: 100.0%;"><b>Mötesplats Åby</b><br>Departures: 0<br>Arrivals: 1<br>Departures: 0</div>`)[0];
+                popup_e7e93eeea269a4e8055927ea8fa5c957.setContent(html_b2a56148a9edc6fc7f04f3dd9346946c);
+            
+        
+
+        circle_marker_5367c7fb6f2a3ca90091093ed2257720.bindPopup(popup_e7e93eeea269a4e8055927ea8fa5c957)
+        ;
+
+        
+    
+    
+            var circle_marker_269d63103662a8ed59b29db876ccc083 = L.circleMarker(
+                [57.706985, 11.983874],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_1ba33b6b6074e09d6933e55a705be741 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f80fbdcfa908abfa83a9a7854308a21 = $(`<div id="html_0f80fbdcfa908abfa83a9a7854308a21" style="width: 100.0%; height: 100.0%;"><b>Ullevigatan</b><br>Departures: 0<br>Arrivals: 1<br>Departures: 0</div>`)[0];
+                popup_1ba33b6b6074e09d6933e55a705be741.setContent(html_0f80fbdcfa908abfa83a9a7854308a21);
+            
+        
+
+        circle_marker_269d63103662a8ed59b29db876ccc083.bindPopup(popup_1ba33b6b6074e09d6933e55a705be741)
+        ;
+
+        
+    
+    
+            var circle_marker_4aa5928d8e75e5b47569e5fa446cce84 = L.circleMarker(
+                [57.701224, 11.992199],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_42de763561d0971f694646938b6e79dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd682e6cd3eac2f28444b92b3d0e5146 = $(`<div id="html_bd682e6cd3eac2f28444b92b3d0e5146" style="width: 100.0%; height: 100.0%;"><b>Åvägen</b><br>Departures: 0<br>Arrivals: 2<br>Departures: 0</div>`)[0];
+                popup_42de763561d0971f694646938b6e79dc.setContent(html_bd682e6cd3eac2f28444b92b3d0e5146);
+            
+        
+
+        circle_marker_4aa5928d8e75e5b47569e5fa446cce84.bindPopup(popup_42de763561d0971f694646938b6e79dc)
+        ;
+
+        
+    
+    
+            var circle_marker_c7ebf87338a548c9e64767f1c3432146 = L.circleMarker(
+                [57.711988, 11.980608],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_672eb82699430b45ce44edcf4db4f4d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7807a38c62491f57434c96ad9dd897e9 = $(`<div id="html_7807a38c62491f57434c96ad9dd897e9" style="width: 100.0%; height: 100.0%;"><b>Kruthusgatan</b><br>Departures: 0<br>Arrivals: 1<br>Departures: 0</div>`)[0];
+                popup_672eb82699430b45ce44edcf4db4f4d4.setContent(html_7807a38c62491f57434c96ad9dd897e9);
+            
+        
+
+        circle_marker_c7ebf87338a548c9e64767f1c3432146.bindPopup(popup_672eb82699430b45ce44edcf4db4f4d4)
+        ;
+
+        
+    
+    
+            var circle_marker_45ca22f008c87da1aec825f32077a8a3 = L.circleMarker(
+                [57.687107, 11.997463],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_971fdb739503c26c66a69c43dcd2df1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5771eaf9be1ff7e94b2128a1911caff5 = $(`<div id="html_5771eaf9be1ff7e94b2128a1911caff5" style="width: 100.0%; height: 100.0%;"><b>Almedal</b><br>Departures: 0<br>Arrivals: 12<br>Departures: 0</div>`)[0];
+                popup_971fdb739503c26c66a69c43dcd2df1a.setContent(html_5771eaf9be1ff7e94b2128a1911caff5);
+            
+        
+
+        circle_marker_45ca22f008c87da1aec825f32077a8a3.bindPopup(popup_971fdb739503c26c66a69c43dcd2df1a)
+        ;
+
+        
+    
+    
+            var circle_marker_f15a4f0b9ef68a74510807973537fb59 = L.circleMarker(
+                [57.681076, 12.000622],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_d2202e2d78f634902919ae098ecbef9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff5a61ac4b58b28f421f219128e3a012 = $(`<div id="html_ff5a61ac4b58b28f421f219128e3a012" style="width: 100.0%; height: 100.0%;"><b>Falkenbergsgatan</b><br>Departures: 0<br>Arrivals: 7<br>Departures: 0</div>`)[0];
+                popup_d2202e2d78f634902919ae098ecbef9e.setContent(html_ff5a61ac4b58b28f421f219128e3a012);
+            
+        
+
+        circle_marker_f15a4f0b9ef68a74510807973537fb59.bindPopup(popup_d2202e2d78f634902919ae098ecbef9e)
+        ;
+
+        
+    
+    
+            var circle_marker_093dcf7ff1d7dab4499874cf3396cea8 = L.circleMarker(
+                [57.719031, 11.948186],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_111e22d0e7b031aa5feadb153d83b925 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c73d9f4bad368539d2d60dbdc4d8bb9d = $(`<div id="html_c73d9f4bad368539d2d60dbdc4d8bb9d" style="width: 100.0%; height: 100.0%;"><b>Kvilletorget</b><br>Departures: 0<br>Arrivals: 1<br>Departures: 0</div>`)[0];
+                popup_111e22d0e7b031aa5feadb153d83b925.setContent(html_c73d9f4bad368539d2d60dbdc4d8bb9d);
+            
+        
+
+        circle_marker_093dcf7ff1d7dab4499874cf3396cea8.bindPopup(popup_111e22d0e7b031aa5feadb153d83b925)
+        ;
+
+        
+    
+    
+            var circle_marker_53ce33c9ff272d830e6aba7d75c40998 = L.circleMarker(
+                [57.674765, 11.935815],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_09aab6b8774f1e15364f647631df03ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81fa02a7c8079391095b42902bf4ad9e = $(`<div id="html_81fa02a7c8079391095b42902bf4ad9e" style="width: 100.0%; height: 100.0%;"><b>Marklandsgatan (A)</b><br>Departures: 0<br>Arrivals: 3<br>Departures: 0</div>`)[0];
+                popup_09aab6b8774f1e15364f647631df03ca.setContent(html_81fa02a7c8079391095b42902bf4ad9e);
+            
+        
+
+        circle_marker_53ce33c9ff272d830e6aba7d75c40998.bindPopup(popup_09aab6b8774f1e15364f647631df03ca)
+        ;
+
+        
+    
+    
+            var circle_marker_0fce9645036b24e754167d7f84d2a05e = L.circleMarker(
+                [57.69447, 11.961815],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_9ee3e55f78d285cc22915c65fc70f4fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2adefffe1d283ebca4ac91a9fb202f31 = $(`<div id="html_2adefffe1d283ebca4ac91a9fb202f31" style="width: 100.0%; height: 100.0%;"><b>Föreningsgatan</b><br>Departures: 0<br>Arrivals: 1<br>Departures: 0</div>`)[0];
+                popup_9ee3e55f78d285cc22915c65fc70f4fe.setContent(html_2adefffe1d283ebca4ac91a9fb202f31);
+            
+        
+
+        circle_marker_0fce9645036b24e754167d7f84d2a05e.bindPopup(popup_9ee3e55f78d285cc22915c65fc70f4fe)
+        ;
+
+        
+    
+    
+            var circle_marker_513b64d20286826da938126d816b543a = L.circleMarker(
+                [57.652215, 11.910554],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_ca56d33671249859efbd93e3caf057a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e7903bb3bac9d1e7df19ffadcf582e3 = $(`<div id="html_1e7903bb3bac9d1e7df19ffadcf582e3" style="width: 100.0%; height: 100.0%;"><b>Frölunda torg</b><br>Departures: 0<br>Arrivals: 1<br>Departures: 0</div>`)[0];
+                popup_ca56d33671249859efbd93e3caf057a3.setContent(html_1e7903bb3bac9d1e7df19ffadcf582e3);
+            
+        
+
+        circle_marker_513b64d20286826da938126d816b543a.bindPopup(popup_ca56d33671249859efbd93e3caf057a3)
+        ;
+
+        
+    
+    
+            var circle_marker_09725b29b770a8afda66c037467d5a4f = L.circleMarker(
+                [57.700963, 11.914973],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_1e98de622f311678bd530ab88921e371 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e14e2cc288d1883c883025cce096c119 = $(`<div id="html_e14e2cc288d1883c883025cce096c119" style="width: 100.0%; height: 100.0%;"><b>Eriksbergshallen</b><br>Departures: 0<br>Arrivals: 4<br>Departures: 0</div>`)[0];
+                popup_1e98de622f311678bd530ab88921e371.setContent(html_e14e2cc288d1883c883025cce096c119);
+            
+        
+
+        circle_marker_09725b29b770a8afda66c037467d5a4f.bindPopup(popup_1e98de622f311678bd530ab88921e371)
+        ;
+
+        
+    
+    
+            var circle_marker_9fc5b1331050d305f4c6b255d5f218c2 = L.circleMarker(
+                [57.681715, 11.935658],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_ea06f4771a60abdbc3253e28e31fb1eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27da9167395e62ae5ca4dc0469847fd6 = $(`<div id="html_27da9167395e62ae5ca4dc0469847fd6" style="width: 100.0%; height: 100.0%;"><b>Dalens idrottsplan</b><br>Departures: 0<br>Arrivals: 2<br>Departures: 0</div>`)[0];
+                popup_ea06f4771a60abdbc3253e28e31fb1eb.setContent(html_27da9167395e62ae5ca4dc0469847fd6);
+            
+        
+
+        circle_marker_9fc5b1331050d305f4c6b255d5f218c2.bindPopup(popup_ea06f4771a60abdbc3253e28e31fb1eb)
+        ;
+
+        
+    
+    
+            var circle_marker_aae10f4794cc68f88942bfe25ae85519 = L.circleMarker(
+                [57.686915, 11.958232],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1}
+            ).addTo(map_7c254db9e832f28644ac39ce3df17fd9);
+        
+    
+        var popup_dd163e4f5fe15a1112ceeb866c8fb16f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3ce4fd9672465766a0fc7644d3b6991 = $(`<div id="html_b3ce4fd9672465766a0fc7644d3b6991" style="width: 100.0%; height: 100.0%;"><b>Medicinareberget</b><br>Departures: 0<br>Arrivals: 1<br>Departures: 0</div>`)[0];
+                popup_dd163e4f5fe15a1112ceeb866c8fb16f.setContent(html_b3ce4fd9672465766a0fc7644d3b6991);
+            
+        
+
+        circle_marker_aae10f4794cc68f88942bfe25ae85519.bindPopup(popup_dd163e4f5fe15a1112ceeb866c8fb16f)
+        ;
+
+        
+    
+</script>
+</html>

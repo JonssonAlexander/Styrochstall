@@ -1,0 +1,27 @@
+data:
+  root: data
+  raw: raw
+  processed: processed
+  models: models
+  cache: cache
+features:
+  resample:
+    frequency: "5min"
+    fill_method: "pad"
+    drop_unobserved_stations: false
+  rebalancing_threshold: 6
+  smoothing_window: 3
+demand:
+  method: moving_average
+  window_intervals: 6
+travel_time:
+  bin_minutes: 5
+  max_minutes: 90
+od:
+  time_slot_minutes: 60
+  max_iterations: 80
+  tolerance: 1e-5
+  gravity_beta: 0.6
+  nearest_neighbor_k: 5
+cache: true
+overwrite: false

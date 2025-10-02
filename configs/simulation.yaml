@@ -1,0 +1,43 @@
+data:
+  root: data
+  raw: raw
+  processed: processed
+  models: models
+  cache: cache
+
+# Use the observed MAPS artefacts for travel times and OD flows
+travel_time_model_path: data/models/travel_time.parquet
+od_model_path: data/models/observed_od_tidy.parquet
+demand_model_path: data/models/maps_lambda.parquet
+features_path: data/processed/station_panel.parquet
+
+policies:
+  - name: max60
+    max_rental_minutes: 60
+    grace_period_minutes: 5
+  - name: max55
+    max_rental_minutes: 55
+  - name: max50
+    max_rental_minutes: 50
+  - name: max45
+    max_rental_minutes: 45
+  - name: max40
+    max_rental_minutes: 40
+  - name: max35
+    max_rental_minutes: 35
+  - name: max30
+    max_rental_minutes: 30
+    grace_period_minutes: 2
+
+rebalancing:
+  enabled: true
+  trigger_threshold: 8
+  batch_size: 6
+  check_interval_minutes: 45
+
+simulation_horizon: "PT2H"
+warm_up_minutes: 0
+random_seed: 42
+walkers_speed_kmph: 4.8
+policy_constraint_stockout: 0.05
+policy_constraint_walk_minutes: 3.0

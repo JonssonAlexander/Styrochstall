@@ -1,0 +1,25 @@
+data:
+  root: data
+  raw: raw
+  processed: processed
+  models: models
+  cache: cache
+policies:
+  - name: max60
+    max_rental_minutes: 60
+    grace_period_minutes: 5
+  - name: max45
+    max_rental_minutes: 45
+  - name: max30
+    max_rental_minutes: 30
+    grace_period_minutes: 2
+rebalancing:
+  enabled: true
+  trigger_threshold: 8
+  batch_size: 6
+  check_interval_minutes: 45
+warm_up_minutes: 30
+random_seed: 42
+walkers_speed_kmph: 4.8
+policy_constraint_stockout: 0.05
+policy_constraint_walk_minutes: 3.0
