@@ -2,5 +2,6 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .venv/
-data/raw/*
+data/raw/GBFS
+data/raw/MAPS
 data/cache/
