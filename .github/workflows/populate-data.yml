@@ -33,7 +33,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(data): add GBFS/MAPS snapshot"
-          branch: data
+          branch: main
           file_pattern: |
             data/raw/GBFS/**
             data/raw/MAPS/**
