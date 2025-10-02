@@ -33,9 +33,9 @@ class GBFSFeedConfig(BaseModel):
     )
     feeds: Dict[str, str] = Field(
         default_factory=lambda: {
-            "station_information": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/station_information.json",
-            "station_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/station_status.json",
-            "free_bike_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/free_bike_status.json",
+            "station_information": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/en/station_information.json",
+            "station_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/en/station_status.json",
+            "free_bike_status": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/en/free_bike_status.json",
         }
     )
     request_timeout: float = Field(default=10.0, ge=1.0)
