@@ -1,0 +1,7 @@
+{
+  "time_granularity": "1h",
+  "smoothing": 0.05,
+  "ensure_self_loops": true,
+  "station_count": 175,
+  "time_bin_count": 26
+}

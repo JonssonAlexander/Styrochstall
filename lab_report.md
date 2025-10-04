@@ -124,8 +124,11 @@ From the data we have, what to do?
 
 Tried to do something with strongly connected components. this is what i have, i like the last one best but needs further refinments
 Recompute analytics (choose your own fraction):
+
 python3.11 graph_diagnostics.py --tidy-od data/models/observed_od_tidy.parquet --edge-threshold 0.2 --absorbing-output data/processed/absorbing_states.parquet --cycles-output data/processed/strongly_connected_components.parquet --dependency-output data/processed/station_dependencies.parquet --flow-summary-output data/processed/station_flow_summary.parquet
+
 Refresh the existing SCC map:
+
 python3.11 graph_components_map.py --station-info data/processed/station_information.parquet --absorbing data/processed/absorbing_states.parquet --components data/processed/strongly_connected_components.parquet --output reports/graph_components_map.html
 
 I think this to see graph dependencies:
@@ -136,3 +139,45 @@ TODO  Isolate time of day activity per week day
 TODO  Hook up a weather api for each station and see if amount of trips are correlated with rain.
 
 
+
+For the markov simulation:
+
+python3 build_markov_chain.py \
+  --maps-trips data/processed/maps_trips.parquet \
+  --stations data/processed/station_information.parquet \
+  --output data/processed/markov_transitions.parquet \
+  --time-granularity 1H --smoothing 0.05
+
+
+python3 prepare_simulation_data.py \
+  --trips data/processed/maps_trips.parquet \
+  --station-counts data/processed/gbfs_maps_station_counts.parquet \
+  --rebalance-events data/processed/rebalancing_events.parquet \
+  --station-info data/processed/station_information.parquet \
+  --snapshot-source MAPS \
+  --inventory-strategy mean
+
+python3 update_travel_time_cache.py \
+  --transitions data/processed/markov_transitions.parquet \
+  --station-info data/processed/station_information.parquet \
+  --cache data/processed/travel_time_cache.parquet \
+  --probability-threshold 0.01 \
+  --mean-speed-kmph 17
+
+python3 run_monte_carlo_simulation.py \
+  --transitions data/processed/markov_transitions.parquet \
+  --departures data/processed/simulation_departures.parquet \
+  --inventory data/processed/simulation_initial_inventory.parquet \
+  --rebalance data/processed/simulation_rebalancing_events.parquet \
+  --station-info data/processed/station_information.parquet \
+  --travel-cache data/processed/travel_time_cache.parquet \
+  --replications 200 \
+  --mean-speed-kmph 17 \
+  --outcomes-output data/processed/monte_carlo_outcomes.parquet \
+  --probability-output data/processed/monte_carlo_stockout_probabilities.parquet
+
+
+python3 plot_stockout_probability_map.py --probabilities data/processed/monte_carlo_stockout_probabilities.parquet --station-info data/processed/station_information.parquet --scenario demand_only --output reports/stockout_probability_map.html --time-granularity 1H   
+
+with refill included:
+python3 plot_stockout_probability_map.py --probabilities data/processed/monte_carlo_stockout_probabilities.parquet --station-info data/processed/station_information.parquet --scenario demand_with_refill --output reports/stockout_probability_map_refill.html --time-granularity 1H  
